@@ -1,0 +1,25 @@
+easy_admin:
+    entities:
+
+        TrainingOffer:
+            class: App\Entity\TrainingOffer
+            label: training_offer.admin.title
+            controller: App\Admin\AdminTrainingOfferController
+            list:
+                fields:
+                    - id
+                    - title
+                    - slug
+                    - description
+                    - price
+                    - language
+            form:
+                fields:
+                    - title
+                    - description
+                    - property: price
+                      help: training_offer.admin.price.help
+                    - property: language
+                      type: choice
+                      type_options:
+                          choices: !php/const App\Entity\TrainingOffer::LANGUAGES

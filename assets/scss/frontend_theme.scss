@@ -1,0 +1,20 @@
+/**
+ * Note:
+ * This has been copy/pasted from ~startbootstrap-freelancer/scss/freelancer.scss
+ * The goal is to be able to modify it easily.
+ */
+
+// Update variables here
+$teal: #0b5477;
+$dark-blue: #182a3c;
+
+@import "../../node_modules/startbootstrap-freelancer/scss/base/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/startbootstrap-freelancer/scss/base/page";
+@import "../../node_modules/startbootstrap-freelancer/scss/components/divider";
+@import "../../node_modules/startbootstrap-freelancer/scss/components/buttons";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/navbar";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/masthead";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/portfolio";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/contact";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/footer";

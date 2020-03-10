@@ -1,2 +1,31 @@
 training_offer.admin.title: Training offers
 training_offer.admin.price.help: In cents
+
+master_head.title: Certified PHP/Symfony developer – Trainer and coach
+
+services.title: Services
+
+skills.title: Skills
+skills.left: |
+    Pragmatic programming
+    Clean code
+    Professional architectures
+    Best practices evangelist
+    PHP / Symfony trainer
+    Passionate web developer
+skills.right: |
+    Certified Symfony 3 and 4
+    10+ years of experience in dev
+    Javascript vanillist
+    PhpStorm massive user
+    Git fan
+    PHP addict
+skills.hire_me: Hire me!
+
+contact.title: Contact
+
+footer.where: Remote what?
+footer.where.text: I mostly work remotely, and I would be glad to help you and your team to set up a fully functional remote workflow
+footer.around_the_web: Find me on the web
+footer.about_me: About me
+footer.about_me.text: After having written my first lines of code at the age of 7, I know love to share my passion and knowledge for programming and create awesome projects

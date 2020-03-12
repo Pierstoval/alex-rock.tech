@@ -13,49 +13,51 @@ declare(strict_types=1);
 
 namespace App\Admin;
 
-use App\Entity\TrainingOffer;
-use App\Form\DTO\AdminTrainingOfferDTO;
+use App\Entity\Service;
+use App\Form\DTO\AdminServiceDTO;
 use App\Form\DTO\EasyAdminDTOInterface;
 use Closure;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\EasyAdminController;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
-class AdminTrainingOfferController extends EasyAdminController
+class AdminServiceController extends EasyAdminController
 {
     use BaseDTOControllerTrait;
 
+    private string $uploadPath;
     private SluggerInterface $slugger;
 
-    public function __construct(SluggerInterface $slugger)
+    public function __construct(string $uploadPath, SluggerInterface $slugger)
     {
+        $this->uploadPath = $uploadPath;
         $this->slugger = $slugger;
     }
 
     protected function getDTOClass(): string
     {
-        return AdminTrainingOfferDTO::class;
+        return AdminServiceDTO::class;
     }
 
     /**
-     * @param AdminTrainingOfferDTO $dto
+     * @param AdminServiceDTO $dto
      */
     protected function createEntityFromDTO(EasyAdminDTOInterface $dto): object
     {
         $slugger = $this->getSluggerCallback();
 
-        return TrainingOffer::fromAdmin($dto, \uuid_create(\UUID_TYPE_RANDOM), $slugger);
+        return Service::fromAdmin($dto, \uuid_create(\UUID_TYPE_RANDOM), $slugger);
     }
 
     /**
-     * @param TrainingOffer         $entity
-     * @param AdminTrainingOfferDTO $dto
+     * @param Service         $entity
+     * @param AdminServiceDTO $dto
      */
     protected function updateEntityWithDTO(object $entity, EasyAdminDTOInterface $dto): object
     {
         return $this->doUpdateEntityWithDTO($entity, $dto);
     }
 
-    private function doUpdateEntityWithDTO(TrainingOffer $entity, AdminTrainingOfferDTO $dto): TrainingOffer
+    private function doUpdateEntityWithDTO(Service $entity, AdminServiceDTO $dto): Service
     {
         $entity->updateFromAdmin($dto);
 

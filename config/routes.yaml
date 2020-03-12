@@ -1,6 +1,23 @@
-home:
+root:
     path: /
+    controller: App\Controller\RootController
+    methods: 'GET'
+
+home:
+    path: /{_locale}
     controller: App\Controller\HomeController
+    methods: 'GET'
+    requirements:
+        _locale: '%locales_regex%'
+
+login:
+    path: /{_locale}/login
+    methods: 'GET'
+    requirements:
+        _locale: '%locales_regex%'
 
 logout:
-    path: /logout
+    path: /{_locale}/logout
+    methods: 'GET'
+    requirements:
+        _locale: '%locales_regex%'

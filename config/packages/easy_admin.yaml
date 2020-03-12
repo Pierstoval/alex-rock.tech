@@ -1,10 +1,10 @@
 easy_admin:
     entities:
 
-        TrainingOffer:
-            class: App\Entity\TrainingOffer
-            label: training_offer.admin.title
-            controller: App\Admin\AdminTrainingOfferController
+        Service:
+            class: App\Entity\Service
+            label: services.title
+            controller: App\Admin\AdminServiceController
             list:
                 fields:
                     - id
@@ -17,9 +17,19 @@ easy_admin:
                 fields:
                     - title
                     - description
-                    - property: price
-                      help: training_offer.admin.price.help
+                    - { property: price, help: services.price.help }
+                    - property: duration
+                      type_options:
+                          required: false
+                    - property: durationUnit
+                      type: choice
+                      type_options:
+                          expanded: true
+                          choices: !php/const App\Entity\Service::DURATION_UNITS
+                    - language
                     - property: language
                       type: choice
                       type_options:
-                          choices: !php/const App\Entity\TrainingOffer::LANGUAGES
+                          expanded: true
+                          choices: !php/const App\Entity\Service::LANGUAGES
+                    - property: previous

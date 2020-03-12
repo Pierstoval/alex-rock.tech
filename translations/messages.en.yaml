@@ -1,9 +1,15 @@
-training_offer.admin.title: Training offers
-training_offer.admin.price.help: In cents
-
-master_head.title: Certified PHP/Symfony developer – Trainer and coach
+todo: 'Upcoming... 😉'
 
 services.title: Services
+services.price.help: In cents, per unit
+
+duration_units.hours: Hours
+duration_units.days: Days
+duration_units.weeks: Weeks
+duration_units.months: Months
+
+toggle_navigation: 'Toggle navigation'
+master_head.title: Certified PHP/Symfony developer – Trainer and coach
 
 skills.title: Skills
 skills.left: |

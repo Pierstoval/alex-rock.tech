@@ -13,23 +13,30 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use App\Form\DTO\AdminTrainingOfferDTO;
+use App\Form\DTO\AdminServiceDTO;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\TrainingOfferRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ServiceRepository")
  * @ORM\Table(
- *     name="training_offers",
+ *     name="services",
  *     uniqueConstraints={
  *         @ORM\UniqueConstraint(name="slug_and_language", columns={"slug", "language"})
  *     }
  * )
  */
-class TrainingOffer
+class Service
 {
     public const LANGUAGES = [
         'fr' => 'fr',
         'en' => 'en',
+    ];
+
+    public const DURATION_UNITS = [
+        'duration_units.hours' => 'hours',
+        'duration_units.days' => 'days',
+        'duration_units.weeks' => 'weeks',
+        'duration_units.months' => 'months',
     ];
 
     /**
@@ -37,7 +44,7 @@ class TrainingOffer
      * @ORM\Id()
      * @ORM\GeneratedValue(strategy="UUID")
      */
-    private string $id;
+    private ?string $id;
 
     /**
      * @ORM\Column(name="title", type="string", length=255)
@@ -63,16 +70,37 @@ class TrainingOffer
     private int $price;
 
     /**
+     * @ORM\Column(name="duration", type="integer", nullable=true)
+     */
+    private ?int $duration = null;
+
+    /**
+     * @ORM\Column(name="duration_unit", type="string", nullable=false)
+     */
+    private ?string $durationUnit = null;
+
+    /**
      * @ORM\Column(name="language", type="string", length=255)
      */
     private string $language;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Service")
+     * @ORM\JoinColumn(name="previous_id", nullable=true)
+     */
+    private ?self $previous;
 
     private function __construct(string $id)
     {
         $this->id = $id;
     }
 
-    public static function fromAdmin(AdminTrainingOfferDTO $dto, string $id, callable $slugger): self
+    public function __toString()
+    {
+        return $this->title;
+    }
+
+    public static function fromAdmin(AdminServiceDTO $dto, string $id, callable $slugger): self
     {
         $self = new self($id);
 
@@ -80,18 +108,23 @@ class TrainingOffer
         $self->description = $dto->description;
         $self->language = $dto->language;
         $self->price = $dto->price;
+        $self->duration = $dto->duration;
+        $self->durationUnit = $dto->durationUnit;
+        $self->previous = $dto->previous;
 
         $self->slug = $slugger($self->title.'_'.$self->language);
 
         return $self;
     }
 
-    public function updateFromAdmin(AdminTrainingOfferDTO $dto): void
+    public function updateFromAdmin(AdminServiceDTO $dto): void
     {
         $this->title = $dto->title;
         $this->description = $dto->description;
         $this->language = $dto->language;
         $this->price = $dto->price;
+        $this->duration = $dto->duration;
+        $this->previous = $dto->previous;
     }
 
     public function getId(): string

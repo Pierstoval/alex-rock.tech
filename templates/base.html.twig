@@ -16,14 +16,10 @@
     </head>
     <body id="page-top">
 
-        {% block body %}
-        {% endblock %}
-
         {{ include('home/_navbar.html.twig', with_context=false) }}
-        {{ include('home/_master_head.html.twig', with_context=false) }}
-        {{ include('home/_services.html.twig', with_context=false) }}
-        {{ include('home/_about.html.twig', with_context=false) }}
-        {{ include('home/_contact.html.twig', with_context=false) }}
+
+        {% block body %}{% endblock %}
+
         {{ include('home/_footer.html.twig', with_context=false) }}
 
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->

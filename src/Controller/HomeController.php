@@ -13,20 +13,25 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Repository\ServiceRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 
 class HomeController
 {
     private Environment $twig;
+    private ServiceRepository $serviceRepository;
 
-    public function __construct(Environment $twig)
+    public function __construct(Environment $twig, ServiceRepository $serviceRepository)
     {
         $this->twig = $twig;
+        $this->serviceRepository = $serviceRepository;
     }
 
     public function __invoke(): Response
     {
-        return new Response($this->twig->render('index.html.twig'));
+        return new Response($this->twig->render('index.html.twig', [
+            'services' => $this->serviceRepository->findAll(),
+        ]));
     }
 }

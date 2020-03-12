@@ -1,2 +1,37 @@
-training_offer.admin.title: Offres de formations
-training_offer.admin.price.help: En centimes
+todo: 'Bientôt... 😉'
+
+services.title: Services
+services.price.help: En centimes, par unité
+
+duration_units.hours: Heures
+duration_units.days: Jours
+duration_units.weeks: Semaines
+duration_units.months: Mois
+
+toggle_navigation: 'Afficher/masquer la navigation'
+master_head.title: Développeur PHP/Symfony certifié – Formateur et coach
+
+skills.title: Compétences
+skills.left: |
+    Programmation pragmatique
+    Code propre
+    Architectures professionnelles
+    Bonnes pratiques de codes
+    Formateur PHP / Symfony
+    Développeur web passionné
+skills.right: |
+    Certifié Symfony 3 et 4
+    10+ ans d'expérience dans le dev
+    Javascript vanille
+    Fort usage de PhpStorm
+    Fan de Git
+    Addict au PHP
+skills.hire_me: Hire me!
+
+contact.title: Contact
+
+footer.where: Remote what?
+footer.where.text: I mostly work remotely, and I would be glad to help you and your team to set up a fully functional remote workflow
+footer.around_the_web: Find me on the web
+footer.about_me: About me
+footer.about_me.text: After having written my first lines of code at the age of 7, I know love to share my passion and knowledge for programming and create awesome projects

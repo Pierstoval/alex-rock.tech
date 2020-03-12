@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace App\Form\DTO;
 
-use App\Entity\TrainingOffer;
+use App\Entity\Service;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class AdminTrainingOfferDTO implements EasyAdminDTOInterface
+class AdminServiceDTO implements EasyAdminDTOInterface
 {
     /**
      * @Assert\NotBlank()
@@ -35,13 +35,34 @@ class AdminTrainingOfferDTO implements EasyAdminDTOInterface
     public ?int $price = null;
 
     /**
+     * @Assert\GreaterThanOrEqual(0)
+     */
+    public ?int $duration = null;
+
+    /**
+     * @Assert\Choice(App\Entity\Service::DURATION_UNITS)
+     */
+    public ?string $durationUnit = null;
+
+    /**
      * @Assert\NotBlank()
-     * @Assert\Choice(App\Entity\TrainingOffer::LANGUAGES)
+     * @Assert\Choice(App\Entity\Service::LANGUAGES)
      */
     public ?string $language = null;
 
     /**
-     * @param TrainingOffer $entity
+     * @Assert\Type(App\Entity\Service::class)
+     */
+    public ?Service $previous = null;
+
+    public function __construct()
+    {
+        $this->language = current(Service::LANGUAGES);
+        $this->durationUnit = current(Service::DURATION_UNITS);
+    }
+
+    /**
+     * @param Service $entity
      */
     public static function createFromEntity(object $entity): self
     {

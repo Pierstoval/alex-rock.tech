@@ -57,8 +57,8 @@ class AdminServiceDTO implements EasyAdminDTOInterface
 
     public function __construct()
     {
-        $this->language = current(Service::LANGUAGES);
-        $this->durationUnit = current(Service::DURATION_UNITS);
+        $this->language = \current(Service::LANGUAGES);
+        $this->durationUnit = \current(Service::DURATION_UNITS);
     }
 
     /**

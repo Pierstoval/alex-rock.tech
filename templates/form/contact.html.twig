@@ -1,0 +1,36 @@
+{% use 'bootstrap_4_layout.html.twig' %}
+
+{% block contact_widget %}
+    {{ form_widget(form) }}
+
+    <div id="success"></div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">
+            {{ 'contact.form.send'|trans }}
+        </button>
+    </div>
+{% endblock %}
+
+{% block form_row %}
+    <div class="control-group">
+        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+
+            {% set attr = attr|merge({
+                placeholder: form.vars.label|trans,
+                class: (((attr.class??'')~' form-control')|trim)
+            }) %}
+
+            {% if form.vars.required %}
+                {% set attr = attr|merge({
+                    'data-validation-required-message': ('contact.validation.'~label)|trans
+                }) %}
+            {% endif %}
+
+            {{ form_label(form) }}
+            {{ form_errors(form) }}
+            {{ form_widget(form, {attr: attr}) }}
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,4 +1,5 @@
 todo: 'Bientôt... 😉'
+close: 'Fermer'
 
 services.title: Services
 services.price.help: En centimes, par unité
@@ -8,7 +9,7 @@ duration_units.days: Jours
 duration_units.weeks: Semaines
 duration_units.months: Mois
 
-toggle_navigation: 'Afficher/masquer la navigation'
+toggle_navigation: Afficher/masquer la navigation
 master_head.title: Développeur PHP/Symfony certifié – Formateur et coach
 
 skills.title: Compétences
@@ -29,9 +30,23 @@ skills.right: |
 skills.hire_me: Hire me!
 
 contact.title: Contact
+contact.me.title: Me contacter
+contact.form.email: Email
+contact.form.message: Message
+contact.form.name: Nom
+contact.form.phone: Téléphone
+contact.form.subject: Sujet
+contact.form.send: Envoyer
+contact.success: Votre message a été envoyé ! Je le recevrai d'ici peu et je prendrai soin de vous répondre rapidement, merci !
 
-footer.where: Remote what?
-footer.where.text: I mostly work remotely, and I would be glad to help you and your team to set up a fully functional remote workflow
-footer.around_the_web: Find me on the web
-footer.about_me: About me
-footer.about_me.text: After having written my first lines of code at the age of 7, I know love to share my passion and knowledge for programming and create awesome projects
+contact.validation.contact.form.email: Pouvez-vous me donner votre adresse e-mail pour que je vous recontacte ?
+contact.validation.contact.form.email_strict: Malheureusement, cette adresse e-mail n'est pas valide…
+contact.validation.contact.form.message: Je suis sûr que vous avez quelque chose à me dire, ne soyez pas timide !
+contact.validation.contact.form.name: Quel est votre nom ?
+contact.validation.contact.form.subject: Merci d'indiquer le sujet de votre message pour être plus précis sur votre demande
+
+footer.where: Télétraquoi?
+footer.where.text: Je travaille exclusivement à distance, et je serais ravi de pouvoir vous aider ainsi que votre équipe à mettre en place une organisation propice au télétravail
+footer.around_the_web: Me trouver sur web
+footer.about_me: À propos
+footer.about_me.text: Après avoir écrit mes premières lignes de code à l'âge de 7 ans, j'aime maintenant partager ma passion et mes connaissances en programmation et créer d'excellents projets

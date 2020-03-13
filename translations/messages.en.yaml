@@ -1,4 +1,5 @@
 todo: 'Upcoming... 😉'
+close: 'Close'
 
 services.title: Services
 services.price.help: In cents, per unit
@@ -8,7 +9,7 @@ duration_units.days: Days
 duration_units.weeks: Weeks
 duration_units.months: Months
 
-toggle_navigation: 'Toggle navigation'
+toggle_navigation: Toggle navigation
 master_head.title: Certified PHP/Symfony developer – Trainer and coach
 
 skills.title: Skills
@@ -29,6 +30,20 @@ skills.right: |
 skills.hire_me: Hire me!
 
 contact.title: Contact
+contact.me.title: Contact me
+contact.form.email: Email
+contact.form.message: Message
+contact.form.name: Name
+contact.form.phone: Phone number
+contact.form.subject: Subject
+contact.form.send: Send
+contact.success: Your message has been sent! I will receive it soon and I will make sure to answer you quickly, thank you!
+
+contact.validation.contact.form.email: Can you give me your email so I can message you back?
+contact.validation.contact.form.email_strict: Unfortunately, this is not a valid e-mail address
+contact.validation.contact.form.message: I am certain you have something to tell me, don't be shy!
+contact.validation.contact.form.name: What is your name?
+contact.validation.contact.form.subject: Please specify a subject to be be more specific on your demand
 
 footer.where: Remote what?
 footer.where.text: I mostly work remotely, and I would be glad to help you and your team to set up a fully functional remote workflow

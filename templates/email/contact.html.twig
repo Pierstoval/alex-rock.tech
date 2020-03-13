@@ -1,0 +1,33 @@
+{% apply inky_to_html|inline_css(source('@css/foundation-emails.css')) %}
+    <container>
+        <row class="header">
+            <columns>
+                <p>
+                    <strong>New message from alex-rock.piers!</strong>
+                </p>
+                <spacer size="16"></spacer>
+                <p>
+                    <strong>Subject:</strong><br>
+                    {{ contact_message.subject }}
+                </p>
+                <spacer size="16"></spacer>
+                <p>
+                    <strong>Message from :</strong><br>
+                    {{ contact_message.name }} &lt;{{ contact_message.email }}&gt;
+                </p>
+                {% if contact_message.phone %}
+                    <spacer size="16"></spacer>
+                    <p>
+                        <strong>Phone number:</strong><br>
+                        {{ contact_message.phone }}
+                    </p>
+                {% endif %}
+                <spacer size="16"></spacer>
+                <p>
+                    <strong>Message:</strong><br>
+                    {{ contact_message.message|nl2br }}
+                </p>
+            </columns>
+        </row>
+    </container>
+{% endapply %}

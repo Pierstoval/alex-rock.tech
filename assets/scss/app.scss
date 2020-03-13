@@ -1,5 +1,30 @@
 @import "frontend_theme";
 
+#homepage .masthead {
+    padding-top: calc(2rem + 74px);
+}
+
+@include media-breakpoint-up(lg) {
+    #homepage {
+        .masthead {
+            padding-top: calc(2rem + 104px);
+        }
+        .page-section {
+            padding-top: calc(5rem - 6px);
+        }
+    }
+}
+
 img.masthead-avatar {
     border-radius: 50%;
+}
+
+body#homepage #flashes {
+    position: absolute;
+    width: 100%;
+    top: 115px;
+}
+
+body:not(#homepage) #flashes {
+    position: relative;
 }

@@ -13,25 +13,37 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Form\DTO\ContactMessage;
+use App\Form\Type\ContactType;
 use App\Repository\ServiceRepository;
+use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Twig\Environment;
 
 class HomeController
 {
     private Environment $twig;
     private ServiceRepository $serviceRepository;
+    private FormFactoryInterface $formFactory;
 
-    public function __construct(Environment $twig, ServiceRepository $serviceRepository)
-    {
+    public function __construct(
+        Environment $twig,
+        ServiceRepository $serviceRepository,
+        FormFactoryInterface $formFactory
+    ) {
         $this->twig = $twig;
         $this->serviceRepository = $serviceRepository;
+        $this->formFactory = $formFactory;
     }
 
-    public function __invoke(): Response
+    public function __invoke(Session $session): Response
     {
+        $form = $this->formFactory->create(ContactType::class, new ContactMessage());
+
         return new Response($this->twig->render('index.html.twig', [
             'services' => $this->serviceRepository->findAll(),
+            'contact_form' => $form->createView(),
         ]));
     }
 }

@@ -15,3 +15,7 @@ services:
         volumes: ['./:/srv']
         working_dir: '/srv'
         command: 'sleep 9999d'
+
+    mailcatcher:
+        image: schickling/mailcatcher
+        ports: ['1025', '1080']

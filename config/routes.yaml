@@ -10,6 +10,13 @@ home:
     requirements:
         _locale: '%locales_regex%'
 
+contact:
+    path: /{_locale}/contact
+    controller: App\Controller\ContactController
+    methods: ['GET', 'POST']
+    requirements:
+        _locale: '%locales_regex%'
+
 login:
     path: /{_locale}/login
     methods: 'GET'

@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 
+{% block body_id 'homepage' %}
+
 {% block body %}
     {{ include('home/_master_head.html.twig', with_context=false) }}
     {{ include('home/_services.html.twig', {services: services}, with_context=false) }}
     {{ include('home/_about.html.twig', with_context=false) }}
-    {{ include('home/_contact.html.twig', with_context=false) }}
+    {{ include('home/_contact.html.twig', {form: contact_form}, with_context=false) }}
 {% endblock %}

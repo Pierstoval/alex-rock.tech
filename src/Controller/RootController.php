@@ -29,6 +29,8 @@ class RootController
     {
         $locale = $request->getPreferredLanguage($this->locales);
 
+        $locale = 'en'; // FIXME ASAP
+
         $url = \rtrim($request->getPathInfo(), '/').'/'.$locale;
 
         return new RedirectResponse($url);

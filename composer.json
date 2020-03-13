@@ -13,6 +13,7 @@
         "symfony/dotenv": "5.0.*",
         "symfony/framework-bundle": "5.0.*",
         "symfony/mailer": "5.0.*",
+        "symfony/mailgun-mailer": "5.0.*",
         "symfony/monolog-bundle": "^3.5",
         "symfony/polyfill-uuid": "^1.14",
         "symfony/string": "5.0.*",

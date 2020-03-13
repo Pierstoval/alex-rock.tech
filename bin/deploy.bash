@@ -9,7 +9,7 @@ composer install --no-interaction --no-progress --classmap-authoritative --no-de
 php bin/console cache:clear --no-warmup
 sudo service php7.4-fpm restart
 php bin/console cache:warmup
-php bin/console assets:install
+php bin/console assets:install --symlink --relative
 php bin/console --no-interaction doctrine:migrations:migrate
 
 npm install

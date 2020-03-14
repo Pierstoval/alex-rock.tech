@@ -24,6 +24,10 @@ install: vendor node_modules db migrations fixtures test-db admin-password asset
 ## -------
 ##
 
+deploy: ## Deploy the project to production
+	php bin\deployer.phar deploy prod
+.PHONY: deploy
+
 start: start-php start-db ## Start the servers.
 .PHONY: start
 

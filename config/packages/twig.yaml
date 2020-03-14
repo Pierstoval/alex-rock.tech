@@ -4,3 +4,5 @@ twig:
         - bootstrap_4_layout.html.twig
     paths:
         '%kernel.project_dir%/assets/css': css
+    globals:
+        services: '%services%'

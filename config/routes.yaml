@@ -16,15 +16,3 @@ contact:
     methods: ['GET', 'POST']
     requirements:
         _locale: '%locales_regex%'
-
-login:
-    path: /{_locale}/login
-    methods: 'GET'
-    requirements:
-        _locale: '%locales_regex%'
-
-logout:
-    path: /{_locale}/logout
-    methods: 'GET'
-    requirements:
-        _locale: '%locales_regex%'

@@ -16,7 +16,7 @@
         <div class="row">
 
             {% for service in services %}
-                {{ macros.services_item(service) }}
+                {{ macros.services_item(service.slug, service.title, service.description, service.image) }}
             {% else %}
                 <p class="btn-block text-center">{{ 'todo'|trans }}</p>
             {% endfor %}

@@ -1,22 +1,22 @@
-{% macro services_item(service) %}
+{% macro services_item(slug, title, description, image = '') %}
     <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#service_{{ service.slug }}">
+        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#service_{{ slug }}">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                 <div class="portfolio-item-caption-content text-center text-white">
                     <i class="fas fa-plus fa-3x"></i>
                 </div>
             </div>
-            {% if service.image is defined %}
-                <img class="img-fluid" src="{{ asset(service.image, 'uploads') }}" alt="{{ service.title }}">
+            {% if image is defined %}
+                <img class="img-fluid" src="{{ asset(image, 'uploads') }}" alt="{{ title }}">
             {% else %}
                 <p>
-                    {{ service.title }}
+                    {{ title }}
                 </p>
             {% endif %}
         </div>
     </div>
 
-    <div class="portfolio-modal modal fade" id="service_{{ service.slug }}" tabindex="-1" role="dialog" aria-labelledby="service_{{ service.slug }}Label" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="service_{{ slug }}" tabindex="-1" role="dialog" aria-labelledby="service_{{ slug }}Label" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -30,7 +30,7 @@
                             <div class="col-lg-8">
 
                                 <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
-                                    {{ service.title }}
+                                    {{ title }}
                                 </h2>
 
                                 <div class="divider-custom">
@@ -41,12 +41,12 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
 
-                                {% if service.image is defined %}
-                                    <img class="img-fluid rounded mb-5" src="{{ asset(service.image, 'uploads') }}" alt="{{ service.title }}">
+                                {% if image is defined %}
+                                    <img class="img-fluid rounded mb-5" src="{{ asset(image, 'uploads') }}" alt="{{ title }}">
                                 {% endif %}
 
                                 <p class="mb-5">
-                                    {{ service.description|raw }}
+                                    {{ description|raw }}
                                 </p>
                             </div>
                         </div>

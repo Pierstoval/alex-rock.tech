@@ -19,6 +19,7 @@ use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
+use Symfony\Component\Yaml\Yaml;
 
 class Kernel extends BaseKernel
 {
@@ -39,6 +40,30 @@ class Kernel extends BaseKernel
     public function getProjectDir(): string
     {
         return \dirname(__DIR__);
+    }
+
+    public function build(ContainerBuilder $container): void
+    {
+        $pricesFile = $container->getParameter('kernel.project_dir').'/data/trainings_prices.yaml';
+        $trainingPrices = Yaml::parseFile($pricesFile);
+        $trainingPrices = $trainingPrices['trainings_prices'];
+        $trainingPrices = \trim($trainingPrices);
+        $trainingPrices = \explode("\n", $trainingPrices);
+        $trainingPrices = \array_combine(\range(1, \count($trainingPrices)), $trainingPrices);
+        $trainingPrices = \array_map(function ($i) use (&$maxNumberOfDays) {
+            $a = \array_map('intval', \explode(';', $i));
+
+            if (!$maxNumberOfDays) {
+                $maxNumberOfDays = \count($a);
+            }
+
+            return \array_combine(\range(1, \count($a)), \array_values($a));
+        }, $trainingPrices);
+
+        $container->setParameter('trainings_prices', $trainingPrices);
+        $container->setParameter('max_number_of_students', \count($trainingPrices));
+        $container->setParameter('max_number_of_days', $maxNumberOfDays);
+        $container->addResource(new FileResource($pricesFile));
     }
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void

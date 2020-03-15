@@ -1,13 +1,6 @@
-todo: 'Upcoming... 😉'
 close: 'Close'
 
 services.title: Services
-services.price.help: In cents, per unit
-
-duration_units.hours: Hours
-duration_units.days: Days
-duration_units.weeks: Weeks
-duration_units.months: Months
 
 toggle_navigation: Toggle navigation
 master_head.title: Certified PHP/Symfony developer – Trainer and coach
@@ -27,7 +20,6 @@ skills.right: |
     PhpStorm massive user
     Git fan
     PHP addict
-skills.hire_me: Hire me!
 
 contact.title: Contact
 contact.me.title: Contact me
@@ -38,6 +30,20 @@ contact.form.phone: Phone number
 contact.form.subject: Subject
 contact.form.send: Send
 contact.success: Your message has been sent! I will receive it soon and I will make sure to answer you quickly, thank you!
+contact.subject.web_development: I have a web development project for you!
+contact.subject.trainings: Information request about trainings
+contact.subject.trainings_message: |
+    Hello Alex Rock,
+
+    I would like to book a training for %number_of_students% person(s).
+
+    Here are the training subjects I would like you to do:
+
+    %trainings%
+
+    Please respond to me soon,
+
+    Greetings.
 
 contact.validation.contact.form.email: Can you give me your email so I can message you back?
 contact.validation.contact.form.email_strict: Unfortunately, this is not a valid e-mail address
@@ -50,3 +56,98 @@ footer.where.text: I mostly work remotely, and I would be glad to help you and y
 footer.around_the_web: Find me on the web
 footer.about_me: About me
 footer.about_me.text: After having written my first lines of code at the age of 7, I know love to share my passion and knowledge for programming and create awesome projects
+
+service_item_button: I need this!
+
+services.development.title: Web development
+services.development.description: |
+    Web development is wide, let's be specific to fit to your needs!
+
+    Here are the different tasks I can do for you:
+
+    * **Write documentation** (who wouldn't?)
+    * **Refactor legacy applications** with newer tools (like **Symfony** of course!)
+    * **Optimize your architecture**, enhance your code (move from **monolith** to **modular**, etc.)
+    * Setup **Continuous Integration** (CircleCI, Travis-CI, Github Actions...)
+    * Add a **Quality Assurance** setup (code style, code quality, types, etc.)
+    * Create **tests** (PHPUnit, Behat...)
+    * Make **code reviews** and **peer programming**
+    * And of course, help you with your daily **issues**, **bug fixes**, **features development**, etc.
+
+    If you are looking for specific technologies, here are the ones I can work with:
+
+    <blockquote class="blockquote">
+        <footer class="blockquote-footer">
+        PHP, Symfony, Git, PHPUnit, Doctrine, Javascript (vanilla, Node.js, Typescript), HTML/CSS, Heroku, SymfonyCloud, Platform.sh, Linux...
+        </footer>
+    </blockquote>
+
+    **One single price:**
+
+    ## 650€ per day
+    (tax excluded)
+
+services.training.title: Trainings & coaching
+services.training.link: View training offers details
+services.training.description: |
+    Web technologies evolve so fast that we must adapt!
+
+    To do so, I propose several training offers.
+
+    I invite you to check them in the dedicated trainings page:
+trainings.number_of_students: 'Number of students:'
+trainings.number_of_days: 'Duration of the training (in days):'
+trainings.final_price: 'Total price (tax excluded):'
+trainings.choosen_list: 'Selected trainings:'
+
+services.training.courses: Courses
+services.training.prices: Prices
+services.training.text: |
+    The formula is simple:
+
+    * **Choose the subjects** you want to take a training for.
+    * You will directly see the **training duration**.
+    * You then determine the **number of students** you want to train.
+    * The price is displayed!
+
+    If you have special conditions, you may contact me anytime.
+services.trainings.more_and_custom: |
+    I can also teach on many other subjects!
+
+    Feel free to contact me if you have a specific training project.
+
+training_item.selected: You selected this training!
+trainings.book_button: Book this training!
+
+training_item.php_discover: Discover PHP
+training_item.php_discover_text: |
+    Duration: 5 days<br>
+
+    Essential web programming language for more than twenty years, PHP is very popular to **create performant applications** and **easy to maintain**.
+
+    As PHP is **very flexible**, all sorts of practices have emerged, and we will together **create an application** to understand the concepts and goals of this language.
+
+training_item.php_oop: PHP object oriented
+training_item.php_oop_text: |
+    Duration: 5 days<br>
+    Pre-requisite: Discover PHP
+
+    To be able to develop projects with **modern practices** and **professional architectures**, it is today essential to know object oriented programming concepts.
+
+    As PHP has a **really practical object implementation**, we will together create an application with a **modern architecture of MVC style**, learn very useful **design patterns** like **Dependency Injection** that allows you to **simplify configuration** and **organization** for your classes, and so many others!
+
+training_item.symfony_discover: Discover Symfony
+training_item.symfony_discover_text: |
+    Duration: 5 days<br>
+    Prerequisites: PHP, PHP object oriented
+
+    Since the publication of the **"Symfony 5: The Fast Track"** book, it has never been so simple to discover **Symfony**!
+
+    Together, we will **create an application** and discover the framework's **best practices**.
+
+training_item.symfony_advanced: Advanced Symfony
+training_item.symfony_advanced_text: |
+    Duration: 5 days<br>
+    Pré-requis: PHP, PHP object oriented, Discover Symfony
+
+    **Symfony helps us everyday** in our programming practices, and to be very comfortable with the framework, we also need to use its **advanced components**, and learn **how the framework internals work**.

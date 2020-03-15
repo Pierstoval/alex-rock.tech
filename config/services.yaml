@@ -9,8 +9,6 @@ parameters:
         - en
     locales_regex: 'fr|en'
     image_uploads_base_path: 'uploads'
-    services:
-        - slug: ''
 
 services:
     # default configuration for services in *this* file

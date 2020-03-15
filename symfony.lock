@@ -17,6 +17,9 @@
     "egulias/email-validator": {
         "version": "2.1.17"
     },
+    "erusev/parsedown": {
+        "version": "1.7.4"
+    },
     "lorenzo/pinky": {
         "version": "1.0.5"
     },
@@ -365,6 +368,9 @@
         "version": "v3.0.3"
     },
     "twig/inky-extra": {
+        "version": "v3.0.3"
+    },
+    "twig/markdown-extra": {
         "version": "v3.0.3"
     },
     "twig/twig": {

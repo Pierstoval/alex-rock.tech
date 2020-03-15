@@ -23,6 +23,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Twig\Environment;
 
 class ContactController
@@ -31,22 +32,40 @@ class ContactController
     private FormFactoryInterface $formFactory;
     private MailerInterface $mailer;
     private UrlGeneratorInterface $router;
+    private TranslatorInterface $translator;
 
     public function __construct(
         Environment $twig,
         FormFactoryInterface $formFactory,
         MailerInterface $mailer,
-        UrlGeneratorInterface $router
+        UrlGeneratorInterface $router,
+        TranslatorInterface $translator
     ) {
         $this->twig = $twig;
         $this->formFactory = $formFactory;
         $this->mailer = $mailer;
         $this->router = $router;
+        $this->translator = $translator;
     }
 
     public function __invoke(Request $request, Session $session): Response
     {
         $contactMessage = new ContactMessage();
+
+        if ($numberOfStudents = $request->query->get('nos')) {
+            $translator = $this->translator;
+            $trainings = array_map(function($training) use ($translator) {
+                return $translator->trans($training);
+            }, $request->query->get('tr'));
+
+            $contactMessage->subject = $this->translator->trans('contact.subject.trainings');
+            $contactMessage->message = $this->translator->trans('contact.subject.trainings_message', [
+                '%number_of_students%' => $numberOfStudents,
+                '%trainings%' => '- '.\implode("\n- ", $trainings),
+            ]);
+        } elseif ($subject = $request->query->get('subject')) {
+            $contactMessage->subject = $this->translator->trans($subject);
+        }
 
         $form = $this->formFactory->create(ContactType::class, $contactMessage);
         $form->handleRequest($request);

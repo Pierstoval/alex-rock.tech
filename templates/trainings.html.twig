@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="page-section" id="contact">
+        <div class="container">
+
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+                {{ 'services.training.title'|trans }}
+            </h2>
+
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <h2>{{ 'services.training.courses'|trans }}</h2>
+
+            <div class="card-deck">
+                {{ include('_training_item.html.twig', {
+                    title: 'training_item.php_discover',
+                    duration: 5,
+                    prerequisites: [],
+                    description: 'training_item.php_discover_text'
+                }) }}
+                {{ include('_training_item.html.twig', {
+                    title: 'training_item.php_oop',
+                    duration: 5,
+                    prerequisites: [
+                        'training_item.php_discover'
+                    ],
+                    description: 'training_item.php_oop_text'
+                }) }}
+            </div>
+            <div class="card-deck">
+                {{ include('_training_item.html.twig', {
+                    title: 'training_item.symfony_discover',
+                    duration: 5,
+                    prerequisites: [
+                        'training_item.php_discover',
+                        'training_item.php_oop'
+                    ],
+                    description: 'training_item.symfony_discover_text'
+                }) }}
+                {{ include('_training_item.html.twig', {
+                    title: 'training_item.symfony_advanced',
+                    duration: 5,
+                    prerequisites: [
+                        'training_item.php_discover',
+                        'training_item.php_oop',
+                        'training_item.symfony_discover'
+                    ],
+                    description: 'training_item.symfony_advanced_text'
+                }) }}
+            </div>
+
+            <p class="alert alert-info">{{ 'services.trainings.more_and_custom'|trans }}</p>
+
+            <h2>{{ 'services.training.prices'|trans }}</h2>
+
+            <p>{{ 'services.training.text'|trans|markdown_to_html }}</p>
+
+            <div class="row">
+                <div class="col-sm-6 mx-auto">
+                    <label for="students">
+                        {{ 'trainings.number_of_students'|trans }}
+                        <div class="number-container" id="number-of-students-value">1</div>
+                    </label>
+                    <input type="range" value="1" min="1" max="{{ max_number_of_students }}" class="custom-range" name="number-of-students" id="number-of-students" data-value-container="number-of-students-value">
+                </div>
+                <div class="col-sm-6 mx-auto">
+                    <label for="students">
+                        {{ 'trainings.number_of_days'|trans }}
+                        <div class="number-container" id="number-of-days-value">1</div>
+                    </label>
+                    <input type="range" value="1" min="1" max="{{ max_number_of_days }}" class="custom-range" name="number-of-days" id="number-of-days" data-value-container="number-of-days-value">
+                </div>
+                <div class="col-sm-12">
+                    <div class="text-center">{{ 'trainings.final_price'|trans }}</div>
+                    <div id="final-price" class="text-center">400 €</div>
+                    <div id="trainings-list-container" class="hide text-center">
+                        {{ 'trainings.choosen_list'|trans }}
+                        <ul class="trainings-list"></ul>
+                        <a href="#" data-href-base="{{ url('contact') }}" class="btn btn-primary btn-lg" id="training-booking-button">
+                            {{ 'trainings.book_button'|trans }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script>window.TRAINING_PRICES={{ trainings_prices|json_encode|raw }};</script>
+    {{ parent() }}
+{% endblock %}

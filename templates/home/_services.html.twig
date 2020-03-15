@@ -1,5 +1,3 @@
-{% import '_services_item_macro.html.twig' as macros %}
-
 <section class="page-section portfolio" id="services">
     <div class="container">
 
@@ -15,11 +13,20 @@
 
         <div class="row">
 
-            {% for service in services %}
-                {{ macros.services_item(service.slug, service.title, service.description, service.image) }}
-            {% else %}
-                <p class="btn-block text-center">{{ 'todo'|trans }}</p>
-            {% endfor %}
+            {{ include('_service_item.html.twig', {
+                slug: 'service_development',
+                title: 'services.development.title',
+                subject: 'contact.subject.web_development',
+                description: 'services.development.description'
+            }, with_context=false) }}
+
+            {{ include('_service_item.html.twig', {
+                slug: 'service_training',
+                title: 'services.training.title',
+                description: 'services.training.description',
+                url: path('trainings'),
+                link_text: 'services.training.link'
+            }, with_context=false) }}
 
         </div>
 

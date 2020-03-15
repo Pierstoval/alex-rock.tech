@@ -7,5 +7,17 @@ import '../../node_modules/startbootstrap-freelancer/js/jqBootstrapValidation.mi
 import '../../node_modules/jquery-easing/dist/jquery.easing.1.3.umd.js';
 import './_contact_me.js';
 import './_freelancer.js';
+import './_trainings.js';
 
-console.info('Hello!');
+const ranges = document.querySelectorAll('input[type="range"]');
+
+ranges.forEach((element) => {
+    if (element.hasAttribute('data-value-container')) {
+        const container = document.getElementById(element.getAttribute('data-value-container'));
+
+        element.addEventListener('input', () => {
+            container.innerText = element.value;
+        });
+    }
+});
+

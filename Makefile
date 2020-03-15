@@ -28,7 +28,8 @@ deploy: ## Deploy the project to production
 	php bin\deployer.phar deploy prod
 .PHONY: deploy
 
-start: start-php start-db ## Start the servers.
+start: start-php ## Start the servers.
+	-@docker-compose up --detach --remove-orphans
 .PHONY: start
 
 stop: ## Stop the servers.

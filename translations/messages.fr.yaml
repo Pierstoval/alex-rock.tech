@@ -1,13 +1,6 @@
-todo: 'Bientôt... 😉'
 close: 'Fermer'
 
 services.title: Services
-services.price.help: En centimes, par unité
-
-duration_units.hours: Heures
-duration_units.days: Jours
-duration_units.weeks: Semaines
-duration_units.months: Mois
 
 toggle_navigation: Afficher/masquer la navigation
 master_head.title: Développeur PHP/Symfony certifié – Formateur et coach
@@ -27,7 +20,6 @@ skills.right: |
     Fort usage de PhpStorm
     Fan de Git
     Addict au PHP
-skills.hire_me: Collaborons !
 
 contact.title: Contact
 contact.me.title: Me contacter
@@ -38,6 +30,20 @@ contact.form.phone: Téléphone
 contact.form.subject: Sujet
 contact.form.send: Envoyer
 contact.success: Votre message a été envoyé ! Je le recevrai d'ici peu et je prendrai soin de vous répondre rapidement, merci !
+contact.subject.web_development: "J'ai un projet de développement web pour vous !"
+contact.subject.trainings: Demande d'informations pour des formations
+contact.subject.trainings_message: |
+    Bonjour Alex Rock,
+
+    J'aimerais réserver une formation pour %number_of_students% personne(s).
+
+    Voici les sujets de formation que j'aimerais que vous abordiez :
+
+    %trainings%
+
+    Merci de me recontacter à ce sujet,
+
+    Cordialement.
 
 contact.validation.contact.form.email: Pouvez-vous me donner votre adresse e-mail pour que je vous recontacte ?
 contact.validation.contact.form.email_strict: Malheureusement, cette adresse e-mail n'est pas valide…
@@ -50,3 +56,98 @@ footer.where.text: Je travaille exclusivement à distance, et je serais ravi de 
 footer.around_the_web: Me trouver sur le web
 footer.about_me: À propos
 footer.about_me.text: Après avoir écrit mes premières lignes de code à l'âge de 7 ans, j'aime maintenant partager ma passion et mes connaissances en programmation et créer d'excellents projets
+
+service_item_button: J'ai besoin de ça !
+
+services.development.title: Développement web
+services.development.description: |
+    Le développement Web, c'est large, soyons spécifiques pour s'adapter à vos besoins !
+
+    Voici les différentes tâches que je peux accomplir pour vous:
+
+    * **Rédiger de la documentation** (Évidemment ! Évidemment ?)
+    * **Refactoriser vos applications legacy** avec des outils plus récents (comme **Symfony** bien sûr !)
+    * **Optimiser votre architecture**, améliorer votre code (passer de **monolithe** à **modulaire**, etc.)
+    * Configurer un environnement d'**Intégration continue** (CircleCI, Travis-CI, Github Actions...)
+    * Ajouter une configuration **d'assurance qualité** (style de code, qualité du code, typage, etc.)
+    * Créer des **tests** (PHPUnit, Behat...)
+    * Faire **des revues de code** et du **peer programming**
+    * Et bien sûr, vous aider avec vos **problèmes de code quotidiens**, **corrections de bugs**, **développement de fonctionnalités**, etc.
+
+    Si vous recherchez des technologies particulières, voici celles avec lesquelles je peux travailler :
+
+    <blockquote class="blockquote">
+        <footer class="blockquote-footer">
+        PHP, Symfony, Git, PHPUnit, Doctrine, Javascript (vanilla, Node.js, Typescript), HTML / CSS, Heroku, SymfonyCloud, Platform.sh, Linux...
+        </footer>
+    </blockquote>
+
+    **Un seul prix :**
+
+    ## 650 € HT par jour
+
+
+services.training.title: Formations & coaching
+services.training.link: Voir les détails des offres de formation
+services.training.description: |
+    Les technologies du web évoluent de plus en plus vite, et il faut savoir s'adapter !
+
+    Pour ce faire, je propose plusieurs formules de formation.
+
+    Je vous invite à vous rendre à la page dédiée pour en savoir plus :
+trainings.number_of_students: 'Nombre d''élèves :'
+trainings.number_of_days: 'Durée de la formation (en jours):'
+trainings.final_price: 'Prix HT:'
+trainings.choosen_list: 'Formations choisies :'
+
+services.training.courses: Cours
+services.training.prices: Tarifs
+services.training.text: |
+    La formule est simple :
+
+    * Vous **choisissez les sujets** sur lesquels vous souhaitez vous former.
+    * En fonction de ceux-ci, vous savez quelle sera la **durée de la formation**.
+    * Vous déterminez ensuite le **nombre d'élèves** que vous devez former.
+    * Le prix est affiché !
+
+    Si vous avez des conditions particulières, vous pouvez me contacter.
+services.trainings.more_and_custom: |
+    Je peux également donner des formations sur beaucoup d'autres sujets !
+
+    N'hésitez pas à me contacter si vous avez un projet de formation spécifique.
+
+training_item.selected: Formation sélectionnée !
+trainings.book_button: Réservez votre formation !
+
+training_item.php_discover: Découvrir PHP
+training_item.php_discover_text: |
+    Durée : 5 jours<br>
+
+    Langage de programmation web phare depuis plus de vingt ans, PHP est très populaire pour créer des **applications web performantes** et **simples à maintenir**.
+
+    PHP étant **très flexibles**, toutes sortes pratiques ont pu voir le jour, et nous allons ensembles **créer une application** pour comprendre tous les concepts et enjeux de ce langage.
+
+training_item.php_oop: PHP orienté objet
+training_item.php_oop_text: |
+    Durée : 5 jours<br>
+    Pré-requis : Découvrir PHP
+
+    Afin de pouvoir développer des projets en utilisant des **pratiques modernes** et des **architectures professionnelles**, il est aujourd'hui devenu indispensable de connaître les concepts de la programmation orientée objet.
+
+    PHP disposant d'une **implémentation objet très pratique**, nous allons ensemble créer une application avec une **architecture moderne de style MVC**, apprendre des _**design patterns**_ très utiles pour développer, comme l'**Injection de Dépendance**, permettant de **simplifier la configuration** et l'**organisation** de vos classes, et tant d'autres !
+
+training_item.symfony_discover: Découvrir Symfony
+training_item.symfony_discover_text: |
+    Durée : 5 jours<br>
+    Pré-requis : Découvrir PHP, PHP orienté objet
+
+    Depuis la sortie du livre **"Symfony 5: The Fast Track"**, il n'a jamais été aussi simple de découvrir **Symfony** !
+
+    Ensemble, nous allons **créer une application** et découvrir les **bonnes pratiques** du framework, ainsi que les meilleurs moyens de continuer son apprentissage efficacement.
+
+training_item.symfony_advanced: Symfony avancé
+training_item.symfony_advanced_text: |
+    Durée : 5 jours<br>
+    Pré-requis : PHP, PHP orienté objet, Découvrir Symfony
+
+    **Symfony nous aide au quotidien** dans notre pratique de développement, et pour être parfaitement à l'aise avec le framework, il faut également apprendre à utiliser ses **composants avancés**, et **comprendre comment fonctionne le framework en interne**.

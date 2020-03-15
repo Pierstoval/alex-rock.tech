@@ -31,6 +31,3 @@ task('assets', <<<TASK
 );
 
 after('deploy:symlink', 'assets');
-
-before('deploy:symlink', 'database:migrate');
-

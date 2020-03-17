@@ -1,5 +1,11 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_script_tags('trainings') }}
+{% endblock %}
+
+
 {% block body %}
     <section class="page-section" id="contact">
         <div class="container">

@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block javascripts %}
+    <script>window.TRAINING_PRICES={{ trainings_prices|json_encode|raw }};</script>
     {{ parent() }}
-    {{ encore_script_tags('trainings') }}
+    {{ encore_entry_script_tags('trainings') }}
 {% endblock %}
-
 
 {% block body %}
     <section class="page-section" id="contact">
@@ -98,9 +98,4 @@
 
         </div>
     </section>
-{% endblock %}
-
-{% block javascripts %}
-    <script>window.TRAINING_PRICES={{ trainings_prices|json_encode|raw }};</script>
-    {{ parent() }}
 {% endblock %}

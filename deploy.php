@@ -17,11 +17,6 @@ host('alex-rock.tech')
     ->user('pierstoval')
     ->stage('prod')
     ->set('deploy_path', '/var/www/alex-rock.tech/deploy')
-    ->addSshFlag('-t')
-    ->addSshOption('StrictHostKeyChecking', 'no')
-    ->forwardAgent(true)
-    ->addSshOption('UserKnownHostsFile', '/dev/null')
-    ->multiplexing(true)
 ;
 
 task('assets', <<<TASK
@@ -31,3 +26,10 @@ task('assets', <<<TASK
 );
 
 after('deploy:symlink', 'assets');
+
+task('php-fpm:reload', function () {
+    run('sudo /etc/init.d/php7.4-fpm reload');
+});
+
+after('deploy', 'php-fpm:reload');
+after('rollback', 'php-fpm:reload');

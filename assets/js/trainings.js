@@ -77,3 +77,29 @@ training_items.forEach((training_item) => {
         recalculatePrice();
     });
 });
+
+function trainingPrice(numberOfStudents, numberOfDays) {
+    numberOfStudents = parseInt(numberOfStudents, 10);
+    numberOfDays = parseInt(numberOfDays, 10);
+    if (isNaN(numberOfStudents) || isNaN(numberOfDays)) {
+        throw 'Invalid number of students/days.';
+    }
+    if (!numberOfDays || !numberOfStudents) {
+        return null;
+    }
+
+    const baseTjm = 400;
+    const degression = 0.25;
+
+    return numberOfDays * (
+        baseTjm
+        - (numberOfStudents * baseTjm * degression)
+        + (baseTjm * degression)
+    );
+}
+
+for (var i = 1; i <= 20; i++) {
+    for (var j = 1; j <= 20; j++) {
+        console.info(`${i} students + ${j} days = ${trainingPrice(i,j)} €`);
+    }
+}

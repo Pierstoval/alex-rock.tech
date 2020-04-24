@@ -1,6 +1,6 @@
 close: 'Close'
 
-services.title: Services
+services.title: Web dev
 
 toggle_navigation: Toggle navigation
 master_head.title: Certified PHP/Symfony developer – Trainer and coach
@@ -87,14 +87,12 @@ services.development.description: |
     ## 600€ per day
     (tax excluded)
 
-services.training.title: Trainings & coaching
-services.training.link: View training offers details
+services.training.title: Trainings
 services.training.description: |
     Web technologies evolve so fast that we must adapt!
 
-    To do so, I propose several training offers.
+    To do so, I propose several training and courses.
 
-    I invite you to check them in the dedicated trainings page:
 trainings.number_of_students: 'Number of students:'
 trainings.number_of_days: 'Duration of the training (in days):'
 trainings.final_price: 'Total price (tax excluded):'

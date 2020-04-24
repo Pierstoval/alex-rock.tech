@@ -57,6 +57,10 @@ body:not(#homepage) #flashes {
     font-weight: bold;
 }
 
+.no-p-margin p {
+    margin: 0;
+}
+
 .training-item {
     cursor: pointer;
     .card-footer {

@@ -7,7 +7,6 @@ const training_booking_button = document.getElementById('training-booking-button
 const training_booking_base_url = training_booking_button.getAttribute('data-href-base');
 const trainings_list_elements_container = trainings_list_container.querySelector('.trainings-list');
 const training_items = document.querySelectorAll('.training-item');
-const prices = window.TRAINING_PRICES;
 
 let selected = [];
 
@@ -55,7 +54,7 @@ function recalculatePrice() {
         training_booking_button.href = training_booking_base_url;
     }
 
-    const final_price = prices[number_of_students][number_of_days];
+    const final_price = trainingPrice(number_of_students, number_of_days);
 
     if (!final_price) {
         throw new Error('No price for this amount of students or days.');
@@ -89,17 +88,6 @@ function trainingPrice(numberOfStudents, numberOfDays) {
     }
 
     const baseTjm = 400;
-    const degression = 0.25;
 
-    return numberOfDays * (
-        baseTjm
-        - (numberOfStudents * baseTjm * degression)
-        + (baseTjm * degression)
-    );
-}
-
-for (var i = 1; i <= 20; i++) {
-    for (var j = 1; j <= 20; j++) {
-        console.info(`${i} students + ${j} days = ${trainingPrice(i,j)} €`);
-    }
+    return baseTjm * (numberOfDays + numberOfStudents);
 }

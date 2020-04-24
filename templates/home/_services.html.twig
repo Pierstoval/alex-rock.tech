@@ -1,32 +1,34 @@
 <section class="page-section portfolio" id="services">
     <div class="container">
 
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ 'services.title'|trans }}</h2>
+        {% set service_title = 'services.development.title'|trans %}
 
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon">
-                <i class="fas fa-star"></i>
+        <div class="justify-content-center">
+
+            <h2 class="text-center text-secondary text-uppercase mb-0">
+                {{ service_title }}
+            </h2>
+
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
             </div>
-            <div class="divider-custom-line"></div>
-        </div>
 
-        <div class="row">
+            {% if image is defined %}
+                <img class="img-fluid rounded mb-5" src="{{ asset(image, 'uploads') }}" alt="{{ service_title }}">
+            {% endif %}
 
-            {{ include('_service_item.html.twig', {
-                slug: 'service_development',
-                title: 'services.development.title',
-                subject: 'contact.subject.web_development',
-                description: 'services.development.description'
-            }, with_context=false) }}
+            <div class="mb-2 text-justify no-p-margin">
+                {{ 'services.development.description'|trans|markdown_to_html }}
+            </div>
 
-            {{ include('_service_item.html.twig', {
-                slug: 'service_training',
-                title: 'services.training.title',
-                description: 'services.training.description',
-                url: path('trainings'),
-                link_text: 'services.training.link'
-            }, with_context=false) }}
+            <a href="{{ url??path('contact', {subject: 'contact.subject.web_development'}) }}"
+               class="btn btn-primary btn-xl btn-outline-light">
+                {{ (link_text??'service_item_button')|trans }}
+            </a>
 
         </div>
 

@@ -4,7 +4,9 @@
 
 {% block body %}
     {{ include('home/_master_head.html.twig', with_context=false) }}
-    {{ include('home/_services.html.twig', with_context=false) }}
+
     {{ include('home/_about.html.twig', with_context=false) }}
+    {{ include('home/_services.html.twig', with_context=false) }}
+    {{ include('home/_trainings.html.twig', with_context=false) }}
     {{ include('home/_contact.html.twig', {form: contact_form}, with_context=false) }}
 {% endblock %}

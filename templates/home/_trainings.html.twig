@@ -1,13 +1,26 @@
-{% extends 'base.html.twig' %}
+{% macro training_item(title, duration, prerequisites, description) %}
+    {% set training_title = title|trans %}
 
-{% block javascripts %}
-    <script>window.TRAINING_PRICES={{ trainings_prices|json_encode|raw }};</script>
-    {{ parent() }}
-    {{ encore_entry_script_tags('trainings') }}
-{% endblock %}
+    <div class="card mb-4 training-item"
+         data-training="{{ title }}"
+         data-duration="{{ duration }}"
+    >
+        <h4 class="card-title card-header">
+            {{ training_title }}
+        </h4>
+        <div class="card-body">
+            <div class="card-text">
+                {{ description|trans|markdown_to_html }}
+            </div>
+        </div>
+        <div class="card-footer">
+            {{ 'training_item.selected'|trans }}
+        </div>
+    </div>
+{% endmacro %}
 
 {% block body %}
-    <section class="page-section" id="contact">
+    <section class="page-section" id="trainings">
         <div class="container">
 
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
@@ -22,44 +35,39 @@
                 <div class="divider-custom-line"></div>
             </div>
 
+            <p>
+                {{ 'services.training.description'|trans|markdown_to_html }}
+            </p>
+
             <h2>{{ 'services.training.courses'|trans }}</h2>
 
             <div class="card-deck">
-                {{ include('_training_item.html.twig', {
-                    title: 'training_item.php_discover',
-                    duration: 5,
-                    prerequisites: [],
-                    description: 'training_item.php_discover_text'
-                }) }}
-                {{ include('_training_item.html.twig', {
-                    title: 'training_item.php_oop',
-                    duration: 5,
-                    prerequisites: [
-                        'training_item.php_discover'
-                    ],
-                    description: 'training_item.php_oop_text'
-                }) }}
+                {{ _self.training_item(
+                    'training_item.php_discover',
+                    5,
+                    [],
+                    'training_item.php_discover_text'
+                ) }}
+                {{ _self.training_item(
+                    'training_item.php_oop',
+                    5,
+                    ['training_item.php_discover'],
+                    'training_item.php_oop_text'
+                ) }}
             </div>
             <div class="card-deck">
-                {{ include('_training_item.html.twig', {
-                    title: 'training_item.symfony_discover',
-                    duration: 5,
-                    prerequisites: [
-                        'training_item.php_discover',
-                        'training_item.php_oop'
-                    ],
-                    description: 'training_item.symfony_discover_text'
-                }) }}
-                {{ include('_training_item.html.twig', {
-                    title: 'training_item.symfony_advanced',
-                    duration: 5,
-                    prerequisites: [
-                        'training_item.php_discover',
-                        'training_item.php_oop',
-                        'training_item.symfony_discover'
-                    ],
-                    description: 'training_item.symfony_advanced_text'
-                }) }}
+                {{ _self.training_item(
+                    'training_item.symfony_discover',
+                    5,
+                    ['training_item.php_discover', 'training_item.php_oop'],
+                    'training_item.symfony_discover_text'
+                ) }}
+                {{ _self.training_item(
+                    'training_item.symfony_advanced',
+                    5,
+                    ['training_item.php_discover', 'training_item.php_oop', 'training_item.symfony_discover'],
+                    'training_item.symfony_advanced_text'
+                ) }}
             </div>
 
             <p class="alert alert-info">{{ 'services.trainings.more_and_custom'|trans }}</p>

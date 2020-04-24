@@ -63,7 +63,6 @@ Encore
     })
 
     .addEntry('app', './assets/js/app.js')
-    .addEntry('trainings', './assets/js/trainings.js')
 ;
 
 module.exports = Encore.getWebpackConfig();

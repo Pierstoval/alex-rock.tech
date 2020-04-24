@@ -9,6 +9,8 @@ parameters:
         - en
     locales_regex: 'fr|en'
     image_uploads_base_path: 'uploads'
+    max_number_of_students: 20
+    max_number_of_days: 20
 
 services:
     # default configuration for services in *this* file

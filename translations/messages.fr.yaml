@@ -1,6 +1,6 @@
 close: 'Fermer'
 
-services.title: Services
+services.title: Dev web
 
 toggle_navigation: Afficher/masquer la navigation
 master_head.title: Développeur PHP/Symfony certifié – Formateur et coach
@@ -87,8 +87,7 @@ services.development.description: |
     ## 600 € HT par jour
 
 
-services.training.title: Formations & coaching
-services.training.link: Voir les détails des offres de formation
+services.training.title: Formations
 services.training.description: |
     Les technologies du web évoluent de plus en plus vite, et il faut savoir s'adapter !
 

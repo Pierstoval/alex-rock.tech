@@ -89,8 +89,11 @@
             return null;
         }
 
-        const baseTjm = 400;
+        const dailyRate = 200;
+        const regressionFactor = 0.5;
 
-        return baseTjm * (numberOfDays + numberOfStudents);
+        return dailyRate * (numberOfStudents + numberOfDays) + (dailyRate * (numberOfStudents + numberOfDays)) * regressionFactor;
     }
+
+    recalculatePrice();
 })();

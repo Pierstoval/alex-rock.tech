@@ -92,7 +92,7 @@
         const dailyRate = 200;
         const regressionFactor = 0.5;
 
-        return dailyRate * (numberOfStudents + numberOfDays) + (dailyRate * (numberOfStudents + numberOfDays)) * regressionFactor;
+        return (dailyRate * (numberOfStudents + numberOfDays)) * (1 + regressionFactor);
     }
 
     recalculatePrice();

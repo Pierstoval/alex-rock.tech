@@ -94,6 +94,11 @@
                 <div class="col-sm-12">
                     <div class="text-center">{{ 'trainings.final_price'|trans }}</div>
                     <div id="final-price" class="text-center">-</div>
+                    <!--
+                    Formula is:
+                    training price = (200 * (days + students)) * 1.5
+                    Send me an email if you see this message, I like feedback :)
+                    -->
                     <div id="trainings-list-container" class="hide text-center">
                         {{ 'trainings.choosen_list'|trans }}
                         <ul class="trainings-list"></ul>

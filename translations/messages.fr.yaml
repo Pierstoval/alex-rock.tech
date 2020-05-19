@@ -1,9 +1,9 @@
 close: 'Fermer'
 
-services.title: Dev web
+services.title: Dev
 
 toggle_navigation: Afficher/masquer la navigation
-master_head.title: Développeur PHP/Symfony certifié – Formateur et coach
+master_head.title: Développeur web PHP/Symfony certifié – Formateur et coach
 
 skills.title: Compétences
 skills.left: |
@@ -21,6 +21,8 @@ skills.right: |
     Fan de Git
     Addict au PHP
 
+menu.blog: Blog
+
 contact.title: Contact
 contact.me.title: Me contacter
 contact.form.email: Email
@@ -31,6 +33,7 @@ contact.form.subject: Sujet
 contact.form.send: Envoyer
 contact.success: Votre message a été envoyé ! Je le recevrai d'ici peu et je prendrai soin de vous répondre rapidement, merci !
 contact.subject.web_development: "J'ai un projet de développement web pour vous !"
+contact.subject.coaching: Demande d'informations pour du coaching
 contact.subject.trainings: Demande d'informations pour des formations
 contact.subject.trainings_message: |
     Bonjour Alex Rock,
@@ -84,10 +87,11 @@ services.development.description: |
 
     **Un seul prix :**
 
-    ## 600 € HT par jour
+    ## 600 € HT par jour
 
+    Contactez-moi si vous souhaitez négocier.
 
-services.training.title: Formations
+services.training.title: Formation
 services.training.description: |
     Les technologies du web évoluent de plus en plus vite, et il faut savoir s'adapter !
 
@@ -107,7 +111,7 @@ services.training.text: |
     * Vous **choisissez les sujets** sur lesquels vous souhaitez vous former.
     * En fonction de ceux-ci, vous savez quelle sera la **durée de la formation**.
     * Vous déterminez ensuite le **nombre d'élèves** que vous devez former.
-    * Le prix est affiché !
+    * Le prix est affiché !
 
     Si vous avez des conditions particulières, vous pouvez me contacter.
 services.trainings.more_and_custom: |
@@ -150,3 +154,22 @@ training_item.symfony_advanced_text: |
     Pré-requis : PHP, PHP orienté objet, Découvrir Symfony
 
     **Symfony nous aide au quotidien** dans notre pratique de développement, et pour être parfaitement à l'aise avec le framework, il faut également apprendre à utiliser ses **composants avancés**, et **comprendre comment fonctionne le framework en interne**.
+
+services.coaching.title: Coaching
+services.coaching.description: |
+    * Vous démarrez un **nouveau projet** et vous avez besoin de **conseils d'architecture** ?
+    * Vous avez des **idées de projet** et ne savez pas **par où commencer** ?
+    * Vous avez recruté récemment des **devs juniors** qui ont besoin d'un **mentor** pour les aider à être à l'aise avec votre projet ?
+    * Votre projet a des **exigences de qualité** et vous souhaitez mettre en place des **outils** pour les respecter ?
+
+    Toutes ces questions peuvent parfois nécessiter des réponses courtes, en moins d'une heure pour certaines ! Et d'autres se font sur la durée, une heure par-ci, deux heures par-là...
+
+    Avec les formules de coaching, vous réservez à l'avance **autant d'heures que vous le souhaitez**, et nous planifions ensembles une session de visioconférence, code-review, audit de code, session de conseils, etc., en fonction de vos disponibilités.
+
+    Tant que vous avez des heures à disposition, il vous suffit de me contacter pour planifier une ou plusieurs heures.
+
+    **Un seul prix :**
+
+    ## 85 € HT par heure
+
+    Si vous avez besoin de réserver plusieurs dizaines d'heures, n'hésitez pas à me contacter.

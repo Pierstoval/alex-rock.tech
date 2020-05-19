@@ -1,9 +1,9 @@
 close: 'Close'
 
-services.title: Web dev
+services.title: Dev
 
 toggle_navigation: Toggle navigation
-master_head.title: Certified PHP/Symfony developer – Trainer and coach
+master_head.title: Certified PHP/Symfony web developer – Trainer and coach
 
 skills.title: Skills
 skills.left: |
@@ -21,6 +21,8 @@ skills.right: |
     Git fan
     PHP addict
 
+menu.blog: Blog
+
 contact.title: Contact
 contact.me.title: Contact me
 contact.form.email: Email
@@ -32,6 +34,7 @@ contact.form.send: Send
 contact.success: Your message has been sent! I will receive it soon and I will make sure to answer you quickly, thank you!
 contact.subject.web_development: I have a web development project for you!
 contact.subject.trainings: Information request about trainings
+contact.subject.coaching: Information request about coaching
 contact.subject.trainings_message: |
     Hello Alex Rock,
 
@@ -87,7 +90,9 @@ services.development.description: |
     ## 600€ per day
     (tax excluded)
 
-services.training.title: Trainings
+    Contact me if you wish to negotiate.
+
+services.training.title: Training
 services.training.description: |
     Web technologies evolve so fast that we must adapt!
 
@@ -101,7 +106,7 @@ trainings.choosen_list: 'Selected trainings:'
 services.training.courses: Courses
 services.training.prices: Prices
 services.training.text: |
-    The formula is simple:
+    The formula is straightforward:
 
     * **Choose the subjects** you want to take a training for.
     * You will directly see the **training duration**.
@@ -149,3 +154,22 @@ training_item.symfony_advanced_text: |
     Pré-requis: PHP, PHP object oriented, Discover Symfony
 
     **Symfony helps us everyday** in our programming practices, and to be very comfortable with the framework, we also need to use its **advanced components**, and learn **how the framework internals work**.
+
+services.coaching.title: Coaching
+services.coaching.description: |
+    * You start a **new project** and need **architecture advices**?
+    * You have **new ideas** for a project and don't know **where to start**?
+    * You recently hired **junior devs** that need a **mentor** to be more comfortable with your project?
+    * Your project has **high quality requirements** and you need to **setup tools** to respect them?
+
+    All these questions can sometimes need **short answers**, in **less than an hour** for some! Others are answered over time, an hour here, two hours there...
+
+    With coaching plans, you book in advance **as many hours as you want**, and we together plan a video conference session, code review, quality assurance checks, advices session, etc., depending on your schedules.
+
+    As long as you still have hours to spend, you just need to contact me to schedule one or more hours.
+
+    **One single price:**
+
+    ## 85 € HT per hour
+
+    If you need to book several dozens of hours, feel free to contact me.

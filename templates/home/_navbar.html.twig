@@ -12,22 +12,25 @@
             <ul class="navbar-nav ml-auto">
                 {% set is_home = app.request.attributes.get('_route') == 'home' %}
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ not is_home ? path('home') }}#skills">{{ 'skills.title'|trans }}</a>
+                    <a class="nav-link py-3 px-lg-3 rounded js-scroll-trigger" href="{{ not is_home ? path('home') }}#services">{{ 'services.title'|trans }}</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ not is_home ? path('home') }}#services">{{ 'services.title'|trans }}</a>
+                    <a class="nav-link py-3 px-lg-3 rounded js-scroll-trigger" href="{{ not is_home ? path('home') }}#trainings">{{ 'services.training.title'|trans }}</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ not is_home ? path('home') }}#trainings">{{ 'services.training.title'|trans }}</a>
+                    <a class="nav-link py-3 px-lg-3 rounded js-scroll-trigger" href="{{ not is_home ? path('home') }}#coaching">{{ 'services.coaching.title'|trans }}</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ not is_home ? path('home') }}#contact">{{ 'contact.title'|trans }}</a>
+                    <a class="nav-link py-3 px-lg-3 rounded js-scroll-trigger" href="{{ not is_home ? path('home') }}#contact">{{ 'contact.title'|trans }}</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-lg-3" href="https://www.orbitale.io/">{{ 'menu.blog'|trans }}</a>
                 </li>
                 {%- set locale = app.request.locale == 'fr' ? 'en' : 'fr' -%}
                 {%- set route_name = app.request.attributes.get('_route', 'home') -%}
                 {%- set route_params = app.request.attributes.get('_route_params', {})|merge({_locale: locale}) -%}
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ path(route_name, route_params) }}">
+                    <a class="nav-link py-3 px-lg-3 text-info" href="{{ path(route_name, route_params) }}">
                         {{- locale|upper -}}
                     </a>
                 </li>

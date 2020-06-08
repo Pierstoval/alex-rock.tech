@@ -1,36 +1,41 @@
-@import "frontend_theme";
+
+$teal: #0b5477;
+$dark-blue: #182a3c;
+$input-color: #212529;
+
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
+@import "../../node_modules/startbootstrap-freelancer/scss/base/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/startbootstrap-freelancer/scss/base/page";
+@import "../../node_modules/startbootstrap-freelancer/scss/components/divider";
+@import "../../node_modules/startbootstrap-freelancer/scss/components/buttons";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/navbar";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/masthead";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/portfolio";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/contact";
+@import "../../node_modules/startbootstrap-freelancer/scss/layout/footer";
+
+.masthead {
+    padding-top: calc(2rem + 74px);
+}
+
+@include media-breakpoint-up(lg) {
+    .masthead {
+        padding-top: calc(2rem + 104px);
+    }
+
+    .page-section {
+        padding-top: calc(5rem - 6px);
+    }
+}
 
 .hide {
     display: none !important;
 }
 
-#homepage .masthead {
-    padding-top: calc(2rem + 74px);
-}
-
-@include media-breakpoint-up(lg) {
-    #homepage {
-        .masthead {
-            padding-top: calc(2rem + 104px);
-        }
-        .page-section {
-            padding-top: calc(5rem - 6px);
-        }
-    }
-}
-
 img.masthead-avatar {
     border-radius: 50%;
-}
-
-body#homepage #flashes {
-    position: absolute;
-    width: 100%;
-    top: 115px;
-}
-
-body:not(#homepage) #flashes {
-    position: relative;
 }
 
 .service-item {
@@ -39,6 +44,10 @@ body:not(#homepage) #flashes {
         text-align: center;
         padding: 50px 0;
     }
+}
+
+h2.page-section-heading {
+    margin-top: 60px;
 }
 
 .number-container {

@@ -1,16 +1,9 @@
-###> symfony/framework-bundle ###
-/.env.local
-/.env.local.php
-/.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
-/public/bundles/
-/var/
-/vendor/
-###< symfony/framework-bundle ###
-
-###> symfony/webpack-encore-bundle ###
+.DS_Store
 /node_modules/
-/public/build/
-npm-debug.log
+/src/node_modules/@sapper/
 yarn-error.log
-###< symfony/webpack-encore-bundle ###
+/cypress/screenshots/
+/__sapper__/
+/static/webfonts
+/static/js
+.env.local

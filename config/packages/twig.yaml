@@ -1,9 +1,0 @@
-twig:
-    default_path: '%kernel.project_dir%/templates'
-    form_themes:
-        - bootstrap_4_layout.html.twig
-    paths:
-        '%kernel.project_dir%/assets/css': css
-    globals:
-        max_number_of_students: "%max_number_of_students%"
-        max_number_of_days: "%max_number_of_days%"

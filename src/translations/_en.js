@@ -5,8 +5,21 @@ export default {
     "master_head.title": "Certified PHP/Symfony web developer – Trainer and coach",
 
     "skills.title": "Skills",
-    "skills.left": "Pragmatic programming\nClean code\nProfessional architectures\nBest practices evangelist\nPHP / Symfony trainer\nPassionate web developer\n",
-    "skills.right": "Certified Symfony 3 and 4\n10+ years of experience in dev\nJavascript vanillist\nPhpStorm massive user\nGit fan\nPHP addict\n",
+    "skills.left": "" +
+        "Pragmatic programming<br>\n" +
+        "Clean code<br>\n" +
+        "Professional architectures<br>\n" +
+        "Best practices evangelist<br>\n" +
+        "PHP / Symfony trainer<br>\n" +
+        "Passionate web developer<br>\n" +
+        "",
+    "skills.right": "" +
+        "Certified Symfony 3 and 4<br>\n" +
+        "10+ years of experience in dev<br>\n" +
+        "Javascript vanillist<br>\n" +
+        "PhpStorm massive user<br>\n" +
+        "Git fan<br>\n" +
+        "Fan of PHP, Javascript, Typescript, Rust, Deno…",
 
     "menu.blog": "Blog",
 
@@ -42,7 +55,7 @@ export default {
     "service_item_button": "I need this!",
 
     "services.development.title": "Web development",
-    "services.development.description": "Web development is wide, let's be specific to fit to your needs!\n\nHere are the different tasks I can do for you:\n\n* **Write documentation** (who wouldn't?)\n* **Refactor legacy applications** with newer tools (like **Symfony** of course!)\n* **Optimize your architecture**, enhance your code (move from **monolith** to **modular**, etc.)\n* Setup **Continuous Integration** (CircleCI, Travis-CI, Github Actions...)\n* Add a **Quality Assurance** setup (code style, code quality, types, etc.)\n* Create **tests** (PHPUnit, Behat...)\n* Make **code reviews** and **peer programming**\n* And of course, help you with your daily **issues**, **bug fixes**, **features development**, etc.\n\nIf you are looking for specific technologies, here are the ones I can work with:\n\n<blockquote class=\"blockquote\">\n    <footer class=\"blockquote-footer\">\n    PHP, Symfony, Git, PHPUnit, Doctrine, Javascript (vanilla, Node.js, Typescript), HTML/CSS, Heroku, SymfonyCloud, Platform.sh, Linux...\n    </footer>\n</blockquote>\n\n**One single price:**\n\n## 600€ per day\n(tax excluded)\n\nContact me if you wish to negotiate.\n",
+    "services.development.description": "Web development is wide, let's be specific to fit to your needs!\n\nHere are the different tasks I can do for you:\n\n* **Write documentation** (who wouldn't?)\n* **Refactor legacy applications** with newer tools (like **Symfony** of course!)\n* **Optimize your architecture**, enhance your code (move from **monolith** to **modular**, etc.)\n* Setup **Continuous Integration** (CircleCI, Travis-CI, Github Actions...)\n* Add a **Quality Assurance** setup (code style, code quality, types, etc.)\n* Create **tests** (PHPUnit, Behat...)\n* Make **code reviews** and **peer programming**\n* And of course, help you with your daily **issues**, **bug fixes**, **features development**, etc.\n\nIf you are looking for specific technologies, here are the ones I can work with:\n\n<blockquote class=\"blockquote\">\n    <footer class=\"blockquote-footer\">\n    PHP, Symfony, Git, PHPUnit, Doctrine, Javascript (vanilla, Node.js, Typescript), HTML/CSS, Heroku, SymfonyCloud, Platform.sh, Linux...\n    </footer>\n</blockquote>",
     "services.training.title": "Training",
     "services.training.description": "Web technologies evolve so fast that we must adapt!\n\nTo do so, I propose several training and courses.\n",
 

@@ -56,8 +56,7 @@ export default {
 				targets: [
 					{ src: 'node_modules/@fortawesome/fontawesome-free/webfonts/', dest: 'static/' },
 					{ src: 'node_modules/jquery/dist/*', dest: 'static/js/' },
-					{ src: 'node_modules/bootstrap/dist/js/*', dest: 'static/js/' },
-					{ src: 'node_modules/startbootstrap-freelancer/js/*', dest: 'static/js/' },
+					{ src: 'node_modules/bootstrap/dist/js/*', dest: 'static/js/' }
 				],
 				copyOnce: true
 			}),

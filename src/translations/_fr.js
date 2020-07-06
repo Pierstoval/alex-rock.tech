@@ -5,8 +5,21 @@ export default {
     "master_head.title": "Développeur web PHP/Symfony certifié – Formateur et coach",
 
     "skills.title": "Compétences",
-    "skills.left": "Programmation pragmatique\nCode propre\nArchitectures professionnelles\nBonnes pratiques de codes\nFormateur PHP / Symfony\nDéveloppeur web passionné\n",
-    "skills.right": "Certifié Symfony 3 et 4\n10+ ans d'expérience dans le dev\nJavascript vanille\nFort usage de PhpStorm\nFan de Git\nAddict au PHP\n",
+    "skills.left": "" +
+        "Programmation pragmatique<br>\n" +
+        "Code propre<br>\n" +
+        "Architectures professionnelles<br>\n" +
+        "Bonnes pratiques de codes<br>\n" +
+        "Formateur PHP / Symfony<br>\n" +
+        "Développeur web passionné<br>\n" +
+        "",
+    "skills.right": "" +
+        "Certifié Symfony 3 et 4<br>\n" +
+        "10+ ans d'expérience dans le dev<br>\n" +
+        "Vanilliste Javascript<br>\n" +
+        "Fort usage de PhpStorm<br>\n" +
+        "Addict à Git<br>\n" +
+        "Fan de PHP, Javascript, Typescript, Rust, Deno…",
 
     "menu.blog": "Blog",
 
@@ -42,9 +55,12 @@ export default {
     "service_item_button": "J'ai besoin de ça !",
 
     "services.development.title": "Développement web",
-    "services.development.description": "Le développement Web, c'est large, soyons spécifiques pour s'adapter à vos besoins !\n\nVoici les différentes tâches que je peux accomplir pour vous:\n\n* **Rédiger de la documentation** (Évidemment ! Évidemment ?)\n* **Refactoriser vos applications legacy** avec des outils plus récents (comme **Symfony** bien sûr !)\n* **Optimiser votre architecture**, améliorer votre code (passer de **monolithe** à **modulaire**, etc.)\n* Configurer un environnement d'**Intégration continue** (CircleCI, Travis-CI, Github Actions...)\n* Ajouter une configuration **d'assurance qualité** (style de code, qualité du code, typage, etc.)\n* Créer des **tests** (PHPUnit, Behat...)\n* Faire **des revues de code** et du **peer programming**\n* Et bien sûr, vous aider avec vos **problèmes de code quotidiens**, **corrections de bugs**, **développement de fonctionnalités**, etc.\n\nSi vous recherchez des technologies particulières, voici celles avec lesquelles je peux travailler :\n\n<blockquote class=\"blockquote\">\n    <footer class=\"blockquote-footer\">\n    PHP, Symfony, Git, PHPUnit, Doctrine, Javascript (vanilla, Node.js, Typescript), HTML / CSS, Heroku, SymfonyCloud, Platform.sh, Linux...\n    </footer>\n</blockquote>\n\n**Un seul prix :**\n\n## 600 € HT par jour\n\nContactez-moi si vous souhaitez négocier.\n",
+    "services.development.description": "Le développement Web, c'est large, soyons spécifiques pour s'adapter à vos besoins !\n\nVoici les différentes tâches que je peux accomplir pour vous:\n\n* **Rédiger de la documentation** (Évidemment ! Évidemment ?)\n* **Refactoriser vos applications legacy** avec des outils plus récents (comme **Symfony** bien sûr !)\n* **Optimiser votre architecture**, améliorer votre code (passer de **monolithe** à **modulaire**, etc.)\n* Configurer un environnement d'**Intégration continue** (CircleCI, Travis-CI, Github Actions...)\n* Ajouter une configuration **d'assurance qualité** (style de code, qualité du code, typage, etc.)\n* Créer des **tests** (PHPUnit, Behat...)\n* Faire **des revues de code** et du **peer programming**\n* Et bien sûr, vous aider avec vos **problèmes de code quotidiens**, **corrections de bugs**, **développement de fonctionnalités**, etc.\n\nSi vous recherchez des technologies particulières, voici celles avec lesquelles je peux travailler :\n\n<blockquote class=\"blockquote\">\n    <footer class=\"blockquote-footer\">\n    PHP, Symfony, Git, PHPUnit, Doctrine, Javascript (vanilla, Node.js, Typescript), HTML / CSS, Heroku, SymfonyCloud, Platform.sh, Linux...\n    </footer>\n</blockquote>",
     "services.training.title": "Formation",
-    "services.training.description": "Les technologies du web évoluent de plus en plus vite, et il faut savoir s'adapter !\n\nPour ce faire, je propose plusieurs formules de formation.\n\nJe vous invite à vous rendre à la page dédiée pour en savoir plus :\n",
+    "services.training.description": "Les technologies du web évoluent de plus en plus vite, et il faut savoir s'adapter !\n\nPour ce faire, je propose plusieurs formules de formation.\n" +
+        "\n**Pour votre financement :**" +
+        "\nJe suis partenaire d'un intermédiaire qui bénéficie d'un numéro d'agrément, datadock, etc., vous permettant de **financer vos formations**, donc n'hésitez pas à me contacter pour plus de détails !\n" +
+        "\nVoici quelques exemples de sujets de formation que je peux aborder :\n",
 
     "trainings.number_of_students": "Nombre d'élèves :",
     "trainings.number_of_days": "Durée de la formation (en jours):",

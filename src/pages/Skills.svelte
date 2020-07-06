@@ -10,7 +10,7 @@
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon">
-                <i class="fas fa-star"></i>
+                <i class="fas fa-moon"></i>
             </div>
             <div class="divider-custom-line"></div>
         </div>
@@ -18,12 +18,12 @@
         <div class="row">
             <div class="col-lg-4 ml-auto">
                 <p class="lead text-center">
-                    {@html $_('skills.left').replace("\n", '<br>')}
+                    {@html $_('skills.left')}
                 </p>
             </div>
             <div class="col-lg-4 mr-auto">
                 <p class="lead text-center">
-                    {@html $_('skills.right').replace("\n", '<br>')}
+                    {@html $_('skills.right')}
                 </p>
             </div>
         </div>

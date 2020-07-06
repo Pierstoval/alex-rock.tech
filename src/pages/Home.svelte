@@ -7,7 +7,7 @@
     <title>{$_('master_head.title')}</title>
 </svelte:head>
 
-<header class="masthead bg-primary text-white text-center">
+<header class="masthead bg-primary text-white text-center pb-0">
     <div class="container d-flex align-items-center flex-column">
 
         <img class="masthead-avatar mb-5" src="/img/avatar.jpg" alt="">
@@ -17,7 +17,7 @@
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon">
-                <i class="fas fa-star"></i>
+                <i class="fas fa-moon"></i>
             </div>
             <div class="divider-custom-line"></div>
         </div>

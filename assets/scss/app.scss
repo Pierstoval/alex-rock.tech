@@ -20,6 +20,16 @@ $input-color: #212529;
 @import "../../node_modules/startbootstrap-freelancer/src/scss/contact.scss";
 @import "../../node_modules/startbootstrap-freelancer/src/scss/footer.scss";
 
+html,
+body,
+#app,
+#content
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .masthead {
     padding-top: calc(2rem + 74px);
 }

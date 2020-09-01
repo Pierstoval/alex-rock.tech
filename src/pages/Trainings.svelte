@@ -63,7 +63,8 @@
             disable_days_selector = true;
         }
 
-        const price = (200 * (number_of_days + number_of_students)) * 1.5;
+        //const price = (200 * (number_of_days + number_of_students)) * 2.00;
+        const price = 300 * (number_of_days * 2 + number_of_students - 1);
 
         final_price = price + ' €';
     }
@@ -133,11 +134,6 @@
             <div class="col-sm-12">
                 <div class="text-center">{$_('trainings.final_price')}</div>
                 <div id="final-price" class="text-center">{final_price}</div>
-                <!--
-                Formula is:
-                training price = (200 * (days + students)) * 1.5
-                Send me an email if you see this message, I like feedback :)
-                -->
                 <div id="trainings-list-container" class="hide text-center">
                     {$_('trainings.choosen_list')}
                     <ul class="trainings-list"></ul>

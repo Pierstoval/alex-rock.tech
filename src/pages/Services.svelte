@@ -22,6 +22,8 @@
 
             <div class="mb-2 text-justify no-p-margin">
                 {@html marked($_('services.development.description').replace("\n", '<br>'))}
+                <br>
+                {@html marked($_('services.development.side_note').replace("\n", '<br>'))}
             </div>
 
             <a href="/{$locale}/contact" class="btn btn-primary btn-xl btn-outline-light">

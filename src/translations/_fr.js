@@ -95,6 +95,7 @@ export default {
     "talks.slides": "Présentation",
     "talks.sf3_review.title": "Nouveautés de Symfony 4",
     "talks.sf4_news.title": "Symfony 3, 4 et Flex",
+    "talks.rust_php.title": "Introduction au langage Rust pour des devs PHP",
     "talks.afup_day_2019.atypical": "🌟 Neuro-atypies dans l'IT",
     "talks.nomad_php.esteren_maps": "🌟 Des cartes interactives avec PHP et Javascript",
 };

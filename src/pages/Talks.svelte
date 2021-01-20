@@ -36,6 +36,14 @@
                 "conference": "Meetup PHP HighCo",
                 "date": "2017-05-16",
             },
+            {
+                "title": "talks.rust_php.title",
+                "videos": ["https://www.youtube.com/watch?v=oKkILL8ypIw"],
+                "slides": ["https://talks.pierstoval.com/rust-for-php-devs"],
+                "lang": "FR",
+                "conference": "Asynconf",
+                "date": "2020-12-22",
+            },
         ],
     ];
 </script>

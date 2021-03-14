@@ -27,7 +27,11 @@ const preprocessOptions = {
 	scss: {
 		failOnError: true,
 		includePaths: ['assets', 'src', 'node_modules'],
-	}
+	},
+	sass: {
+		failOnError: true,
+		includePaths: ['assets', 'src', 'node_modules'],
+	},
 };
 
 export default {

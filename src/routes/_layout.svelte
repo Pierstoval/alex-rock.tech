@@ -6,7 +6,7 @@
 
 <style type="text/scss">
 	:global {
-		@import '../../assets/scss/app.scss';
+		@import 'assets/scss/app.scss';
 	}
 </style>
 

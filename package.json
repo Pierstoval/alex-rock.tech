@@ -1,48 +1,30 @@
 {
-  "name": "alex-rock.tech",
-  "description": "-",
-  "license": "proprietary",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build",
-    "export": "sapper export",
-    "start": "node __sapper__/build",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
-  },
-  "dependencies": {
-    "compression": "^1.7.1",
-    "polka": "next",
-    "sirv": "^0.4.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.13.10",
-    "@babel/runtime": "^7.13.10",
-    "@fortawesome/fontawesome-free": "^5.15.2",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^12.0.0",
-    "@rollup/plugin-node-resolve": "^8.4.0",
-    "@rollup/plugin-replace": "^2.4.1",
-    "bootstrap": "^4.6.0",
-    "marked": "^4.0.10",
-    "node-sass": "^7.0.0",
-    "npm-run-all": "^4.1.5",
-    "popper.js": "^1.16.1",
-    "postcss": "^8.2.13",
-    "postcss-load-config": "^2.1.2",
-    "rollup": "^2.41.2",
-    "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "sapper": "^0.27.13",
-    "startbootstrap-freelancer": "^6.0.5",
-    "svelte": "^3.49.0",
-    "svelte-i18n": "^3.3.6",
-    "svelte-preprocess": "^3.9.6"
-  }
+	"name": "newapp",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "next",
+		"@sveltejs/kit": "next",
+		"@fortawesome/fontawesome-free": "^6.1.2",
+		"bootstrap": "^5.2.0",
+		"marked": "^4.0.18",
+		"sass": "^1.54.4",
+		"popper.js": "^1.16.1",
+		"startbootstrap-freelancer": "^7.0.6",
+		"svelte": "^3.44.0",
+		"svelte-i18n": "^3.4.0",
+		"svelte-check": "^2.7.1",
+		"svelte-preprocess": "^4.10.6",
+		"tslib": "^2.3.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.0.0"
+	},
+	"type": "module"
 }

@@ -1,6 +1,5 @@
 <script>
-	export let status;
-	export let error;
+	import { page } from '$app/stores';
 
 	const dev = process.env.NODE_ENV !== 'production';
 </script>
@@ -28,13 +27,13 @@
 </style>
 
 <svelte:head>
-	<title>{status}</title>
+	<title>{$page.status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<h1>{$page.status}</h1>
 
-<p>{error.message}</p>
+<p>{$page.error.message}</p>
 
-{#if dev && error.stack}
-	<pre>{error.stack}</pre>
+{#if dev }
+	<pre>{$page.error.stack}</pre>
 {/if}

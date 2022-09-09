@@ -1,28 +1,32 @@
 <script lang="ts">
-	import { Page } from "@sveltejs/kit";
+	import { type Page } from "@sveltejs/kit";
 	import { page } from '$app/stores';
 	import {init, locale} from 'svelte-i18n';
 	import '../i18n';
 	import Nav from '../components/Nav.svelte';
 
-	page.subscribe((page: Page) => {
-		let url: URL = page.url;
-		let lang = url.href.replace(/^\/([^\/]+(\/|$))?/g, '$2');
+	let currentLocale = 'en';
 
-		console.info({url, lang});
+	locale.subscribe((loc: string) => currentLocale = loc);
+
+	page.subscribe((page: Page) => {
+		let lang = page.params.locale;
+
+		if (!lang) {
+			lang = 'en';
+		}
+
+		if (lang !== 'fr' && lang !== 'en') {
+			throw new Error(`Invalid locale ${lang}`);
+		}
 
 		locale.set(lang);
+
 		init({
 			fallbackLocale: lang,
 			initialLocale: lang,
 		});
 	});
-
-    /** @type {import('./$types').PageData */
-    export let data;
-    $: ({ segment } = data);
-
-	export let segment;
 </script>
 
 <style>
@@ -31,7 +35,7 @@
 	}
 </style>
 
-<span id="page-top" data-segment="{segment}"></span>
+<span id="page-top" data-segment="{$locale}"></span>
 
 <Nav />
 

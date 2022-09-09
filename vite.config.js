@@ -1,6 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import path from 'path';
-import fs from 'fs';
+import fs from 'fs-extra';
 
 const copyFile = function (options) {
 	return function () {
@@ -8,7 +8,7 @@ const copyFile = function (options) {
 		if (!fs.existsSync(targetDir)){
 			fs.mkdirSync(targetDir);
 		}
-		fs.writeFileSync(options.target, fs.readFileSync(options.source));
+		fs.copySync(options.source, options.target, {overwrite: true});
 	};
 }
 
@@ -16,16 +16,20 @@ const copyFile = function (options) {
 const config = {
 	plugins: [
 		copyFile({
-			source:  './node_modules/@fortawesome/fontawesome-free/webfonts/',
-			target: './static/',
+			source:  __dirname+'/node_modules/@fortawesome/fontawesome-free/webfonts/',
+			target: __dirname+'/static/',
 		}),
 		copyFile({
-			source:  './node_modules/jquery/dist/*',
+			source:  './node_modules/jquery/dist/',
 			target: './static/js/',
 		}),
 		copyFile({
-			source:  './node_modules/bootstrap/dist/js/*',
+			source:  './node_modules/bootstrap/dist/js/',
 			target: './static/js/',
+		}),
+		copyFile({
+			source:  './node_modules/startbootstrap-freelancer/dist/',
+			target: './static/sbf/',
 		}),
 		sveltekit(),
 	],

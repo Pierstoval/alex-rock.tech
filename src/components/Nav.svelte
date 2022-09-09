@@ -1,19 +1,21 @@
-<script>
+<script lang="ts">
     import { _, locale } from 'svelte-i18n';
     import NavLink from './NavLink.svelte';
-    import { stores } from '@sapper/app';
-    const { page } = stores();
+    import { page } from '$app/stores';
+    import type {Page} from "@sveltejs/kit";
 
-    function changeLocale(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        locale.set(nextLocale);
-        nextLocale = nextLocale === 'en' ? 'fr' : 'en';
-    }
+    let nextLocale = 'en';
+    let currentUrl = '';
+    let nextLocaleUrl = '/';
 
-    let nextLocale = $locale === 'en' ? 'fr' : 'en';
+    page.subscribe((page: Page) => {
+        currentUrl = page.url.pathname;
+    });
+    locale.subscribe((newLocale: string) => {
+        nextLocale = newLocale === 'en' ? 'fr' : 'en';
+    });
 
-    $: localeUrl = $page.path.replace(/^\/(fr|en)/i, nextLocale);
+    $: nextLocaleUrl = currentUrl.replace(/^\/(fr|en)?(.*)$/i, `/${nextLocale}$2`);
 </script>
 
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top navbar-shrink" id="mainNav">
@@ -28,7 +30,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mx-0 mx-lg-1">
-                    <NavLink locale="{$locale}" page="services" anchor="services.title" />
+                    <NavLink locale="{$locale}" page="services" anchor="services.title">
+                        This is my HTML!
+                    </NavLink>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
                     <NavLink locale="{$locale}" page="trainings" anchor="services.training.title" />
@@ -46,7 +50,7 @@
                     <a class="nav-link py-3 px-lg-3" href="https://www.orbitale.io/">{$_('menu.blog')}</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a href="{localeUrl}" class="nav-link py-3 px-lg-3 text-info" on:click={changeLocale}>
+                    <a href="{nextLocaleUrl}" class="nav-link py-3 px-lg-3 text-info">
                         {nextLocale}
                     </a>
                 </li>
@@ -54,3 +58,13 @@
         </div>
     </div>
 </nav>
+
+<style lang="scss">
+    #mainNav {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        .navbar-brand {
+            font-size: 1.5em;
+        }
+    }
+</style>

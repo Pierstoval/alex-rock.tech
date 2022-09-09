@@ -1,6 +1,6 @@
 <script>
     import {_} from 'svelte-i18n';
-    import marked from "marked";
+    import {marked} from "marked";
 
     export let title;
     export let description;

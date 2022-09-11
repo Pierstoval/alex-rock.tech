@@ -15,6 +15,12 @@
         nextLocale = newLocale === 'en' ? 'fr' : 'en';
     });
 
+    let collapseClass = true;
+
+    function toggleNav() {
+        collapseClass = !collapseClass;
+    }
+
     $: nextLocaleUrl = currentUrl.replace(/^\/(fr|en)?(.*)$/i, `/${nextLocale}$2`);
 </script>
 
@@ -23,11 +29,11 @@
         <a class="navbar-brand js-scroll-trigger" href="/">
             Alex-Rock.tech
         </a>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="{$_('toggle_navigation')}">
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="{$_('toggle_navigation')}" on:click={toggleNav}>
             <span class="sr-only">Menu</span>
             <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class:collapse={collapseClass}  class="navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mx-0 mx-lg-1">
                     <NavLink locale="{$locale}" page="services" anchor="services.title">

@@ -30,7 +30,7 @@
 	});
 </script>
 
-<style global>
+<style lang="scss" global>
 	:global {
 		@import '../styles/app.scss';
 	}

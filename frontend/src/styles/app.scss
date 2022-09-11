@@ -1,7 +1,10 @@
 
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+$fa-font-path: '../../static/webfonts/';
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
-@import "../../node_modules/startbootstrap-freelancer/src/scss/variables";
+@import "../node_modules/startbootstrap-freelancer/src/scss/variables";
 
 $teal: #0b5477;
 $dark-blue: #182a3c;
@@ -10,7 +13,7 @@ $secondary: $dark-blue;
 
 $input-color: #212529;
 
-@import "../../node_modules/startbootstrap-freelancer/src/scss/styles";
+@import "../node_modules/startbootstrap-freelancer/src/scss/styles";
 
 html,
 body,

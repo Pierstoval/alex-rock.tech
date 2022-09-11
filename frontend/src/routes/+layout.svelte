@@ -4,6 +4,7 @@
 	import {init, locale} from 'svelte-i18n';
 	import '../i18n';
 	import Nav from '../components/Nav.svelte';
+	import {SvelteToast} from '@zerodevx/svelte-toast';
 
 	let currentLocale = 'en';
 
@@ -29,13 +30,23 @@
 	});
 </script>
 
-<style>
+<style global>
 	:global {
-		@import '../../../assets/scss/app';
+		@import '../styles/app.scss';
 	}
+    #toast_container {
+        --toastContainerTop: auto;
+        --toastContainerRight: 1rem;
+        --toastContainerBottom: 0.5rem;
+        --toastContainerLeft: auto;
+    }
 </style>
 
 <span id="page-top" data-segment="{$locale}"></span>
+
+<div id="toast_container">
+	<SvelteToast />
+</div>
 
 <Nav />
 

@@ -34,6 +34,7 @@ export const dictionary = {
     "contact.form.send": "Envoyer",
 
     "contact.success": "Votre message a été envoyé ! Je le recevrai d'ici peu et je prendrai soin de vous répondre rapidement, merci !",
+    "contact.error": "Votre message n'a pas pu être envoyé, veuillez me contacter par le biais de mes autres réseaux.",
 
     "contact.subject.web_development": "J'ai un projet de développement web pour vous !",
     "contact.subject.coaching": "Demande d'informations pour du coaching",

@@ -8,7 +8,16 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			pages: './build/',
+			assets: './build/',
+			fallback: null,
+			precompress: true,
+		}),
+		prerender: {
+			default: true,
+		},
+		trailingSlash: 'always',
 	}
 };
 

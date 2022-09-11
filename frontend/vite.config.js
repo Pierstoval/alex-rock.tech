@@ -15,10 +15,10 @@ const copyFile = function (options) {
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
-		copyFile({
-			source:  __dirname+'/node_modules/@fortawesome/fontawesome-free/webfonts/',
-			target: __dirname+'/static/',
-		}),
+		// copyFile({
+		// 	source:  __dirname+'/node_modules/@fortawesome/fontawesome-free/webfonts/',
+		// 	target: __dirname+'/static/',
+		// }),
 		copyFile({
 			source:  './node_modules/jquery/dist/',
 			target: './static/js/',

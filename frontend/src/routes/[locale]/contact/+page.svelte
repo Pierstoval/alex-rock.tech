@@ -51,7 +51,7 @@
 		}
 
 		contactForm.reset();
-		if (use_captcha) {
+		if (useCaptcha) {
 			hcaptcha.reset(captchaWidgetId);
 		}
 

@@ -51,6 +51,9 @@
 		}
 
 		contactForm.reset();
+		if (use_captcha) {
+			hcaptcha.reset(captchaWidgetId);
+		}
 
 		message($_('contact.success'), ToastType.success);
 	}

@@ -28,10 +28,6 @@ const config = {
 			target: './static/js/',
 		}),
 		copyFile({
-			source:  './node_modules/startbootstrap-freelancer/dist/css/styles.css',
-			target: './static/css/sbf.css',
-		}),
-		copyFile({
 			source:  './node_modules/startbootstrap-freelancer/dist/js/scripts.js',
 			target: './static/js/sbf.js',
 		}),

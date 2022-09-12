@@ -87,7 +87,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 offset-2 ml-auto">
+            <div class="col-lg-4 offset-lg-2 ml-auto">
                 <p class="lead text-center">
                     {@html $_('skills.left')}
                 </p>

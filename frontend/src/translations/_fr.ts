@@ -6,19 +6,19 @@ export const dictionary = {
 
     "skills.title": "Compétences",
     "skills.left": "" +
-        "Programmation pragmatique<br>\n" +
-        "Code propre<br>\n" +
-        "Architectures professionnelles<br>\n" +
-        "Bonnes pratiques de codes<br>\n" +
-        "Formateur PHP / Symfony<br>\n" +
-        "Développeur web passionné<br>\n" +
+        "Programmation pragmatique<br>" +
+        "Code propre<br>" +
+        "Architectures professionnelles<br>" +
+        "Bonnes pratiques de codes<br>" +
+        "Formateur PHP / Symfony<br>" +
+        "Développeur web passionné<br>" +
         "",
     "skills.right": "" +
-        "Certifié Symfony 3 et 4<br>\n" +
-        "10+ ans d'expérience dans le dev<br>\n" +
-        "Vanilliste Javascript<br>\n" +
-        "Fort usage de PhpStorm<br>\n" +
-        "Addict à Git<br>\n" +
+        "Certifié Symfony 3 et 4<br>" +
+        "10+ ans d'expérience dans le dev<br>" +
+        "Vanilliste Javascript<br>" +
+        "Fort usage de PhpStorm<br>" +
+        "Addict à Git<br>" +
         "Fan de PHP, Javascript, Typescript, Rust, Deno…",
 
     "menu.blog": "Blog",
@@ -56,7 +56,7 @@ export const dictionary = {
     "service_item_button": "J'ai besoin de ça !",
 
     "services.development.title": "Développement web",
-    "services.development.description": "Le développement Web, c'est large, soyons spécifiques pour s'adapter à vos besoins !\n\nVoici les différentes tâches que je peux accomplir pour vous:\n\n* **Rédiger de la documentation** (Évidemment ! Évidemment ?)\n* **Refactoriser vos applications legacy** avec des outils plus récents (comme **Symfony** bien sûr !)\n* **Optimiser votre architecture**, améliorer votre code (passer de **monolithe** à **modulaire**, etc.)\n* Configurer un environnement d'**Intégration continue** (CircleCI, Travis-CI, Github Actions...)\n* Ajouter une configuration **d'assurance qualité** (style de code, qualité du code, typage, etc.)\n* Créer des **tests** (PHPUnit, Behat...)\n* Faire **des revues de code** et du **peer programming**\n* Et bien sûr, vous aider avec vos **problèmes de code quotidiens**, **corrections de bugs**, **développement de fonctionnalités**, etc.\n\nSi vous recherchez des technologies particulières, voici celles avec lesquelles je peux travailler :\n\n<blockquote class=\"blockquote\">\n    <footer class=\"blockquote-footer\">\n    PHP, Symfony, Git, PHPUnit, Doctrine, Javascript (vanilla, Node.js, Typescript), Rust, Deno, HTML / CSS, Heroku, SymfonyCloud, Platform.sh, Linux...\n    </footer>\n</blockquote>",
+    "services.development.description": "Le développement Web, c'est large, soyons spécifiques pour s'adapter à vos besoins !\n\nVoici les différentes tâches que je peux accomplir pour vous:\n\n* **Rédiger de la documentation** (Évidemment ! Évidemment ?)\n* **Refactoriser vos applications legacy** avec des outils plus récents (comme **Symfony** bien sûr !)\n* **Optimiser votre architecture**, améliorer votre code (passer de **monolithe** à **modulaire**, etc.)\n* Configurer un environnement d'**Intégration continue** (CircleCI, Travis-CI, Github Actions...)\n* Ajouter une configuration **d'assurance qualité** (style de code, qualité du code, typage, etc.)\n* Créer des **tests** (PHPUnit, Behat...)\n* Faire **des revues de code** et du **peer programming**\n* Et bien sûr, vous aider avec vos **problèmes de code quotidiens**, **corrections de bugs**, **développement de fonctionnalités**, etc.\n\nSi vous recherchez des technologies particulières, voici celles avec lesquelles je peux travailler :\n\n<blockquote class=\"blockquote\">PHP, Symfony, Git, PHPUnit, Doctrine, Javascript (vanilla, Node.js, Typescript), Rust, Deno, HTML / CSS, Heroku, SymfonyCloud, Platform.sh, Linux...</blockquote>",
     "services.development.side_note": "<strong>Votre projet est Open Source ?</strong><br>Profitez de <strong>20% de réduction</strong> si vous souhaitez open-sourcer ne serait-ce qu'une partie de votre code !",
     "services.training.title": "Formation",
     "services.training.description": "Les technologies du web évoluent de plus en plus vite, et il faut savoir s'adapter !\n\nPour ce faire, je propose plusieurs formules de formation.\n" +

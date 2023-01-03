@@ -81,8 +81,32 @@
             "ref": "b131e6cbfe1b898a508987851963fff485986285"
         }
     },
+    "google/recaptcha": {
+        "version": "1.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.1",
+            "ref": "e5a4aa21f2e98d7440ae9aab6b56e307f99dd084"
+        },
+        "files": [
+            "config/packages/google_recaptcha.yaml"
+        ]
+    },
     "jane-php/automapper-bundle": {
         "version": "v7.3.1"
+    },
+    "meteo-concept/hcaptcha-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "e94efaa6cd60c87dc9cc6de56b333a1754187d1e"
+        },
+        "files": [
+            "config/packages/meteo_concept_h_captcha.yaml"
+        ]
     },
     "nelmio/cors-bundle": {
         "version": "2.2",
@@ -94,6 +118,18 @@
         },
         "files": [
             "config/packages/nelmio_cors.yaml"
+        ]
+    },
+    "nyholm/psr7": {
+        "version": "1.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "0cd4d2d0e7f646fda75f9944f747a56e6ed13d4c"
+        },
+        "files": [
+            "config/packages/nyholm_psr7.yaml"
         ]
     },
     "phpunit/phpunit": {

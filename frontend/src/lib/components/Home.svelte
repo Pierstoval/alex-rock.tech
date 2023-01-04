@@ -10,6 +10,7 @@
         position: relative;
         overflow: hidden;
         background: transparent url('/img/True_and_imagine_stars.png') repeat;
+        color: white;
     }
     header.masthead .container {
         position: relative;
@@ -50,21 +51,14 @@
     <title>{$_('master_head.title')}</title>
 </svelte:head>
 
-<header class="masthead text-white text-center pb-0">
+<header class="masthead">
     <div id="stars"></div>
-    <div class="container d-flex align-items-center flex-column">
+    <div class="container">
+        <img class="masthead-avatar" src="/img/avatar.jpg" alt="">
 
-        <img class="masthead-avatar mb-5" src="/img/avatar.jpg" alt="">
+        <h1>Alex Rock</h1>
 
-        <h1 class="masthead-heading text-uppercase mb-0">Alex Rock</h1>
-
-        <div class="divider-custom divider-light">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon">
-                <i class="fas fa-moon"></i>
-            </div>
-            <div class="divider-custom-line"></div>
-        </div>
+        <i class="fa fa-moon"></i>
 
         <p class="masthead-subheading font-weight-light mb-0">
             {$_('master_head.title')}

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import "@fontsource/open-sans";
+	import "@fontsource/roboto";
+
 	import { type Page } from "@sveltejs/kit";
 	import { page } from '$app/stores';
 	import {init, locale} from 'svelte-i18n';
@@ -30,18 +33,6 @@
 	});
 </script>
 
-<style lang="scss" global>
-	:global {
-		@import '../styles/app.scss';
-	}
-    #toast_container {
-        --toastContainerTop: auto;
-        --toastContainerRight: 1rem;
-        --toastContainerBottom: 0.5rem;
-        --toastContainerLeft: auto;
-    }
-</style>
-
 <span id="page-top" data-segment="{$locale}"></span>
 
 <div id="toast_container">
@@ -59,3 +50,13 @@
 		<i class="fa fa-chevron-up"></i>
 	</a>
 </div>
+
+<style lang="scss" global>
+	@import '../styles/app.scss';
+	#toast_container {
+		--toastContainerTop: auto;
+		--toastContainerRight: 1rem;
+		--toastContainerBottom: 0.5rem;
+		--toastContainerLeft: auto;
+	}
+</style>

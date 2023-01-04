@@ -9,5 +9,18 @@ $fa-font-path: '/webfonts/';
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
 html, body {
-  margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
 }

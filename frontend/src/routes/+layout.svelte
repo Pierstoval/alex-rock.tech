@@ -1,6 +1,7 @@
 <script lang="ts">
-	import "@fontsource/open-sans";
-	import "@fontsource/roboto";
+	import "@fontsource/montserrat";
+	import "@fontsource/montserrat/700.css";
+	import "@fontsource/lato";
 
 	import { type Page } from "@sveltejs/kit";
 	import { page } from '$app/stores';

@@ -2,34 +2,75 @@
     import {_} from 'svelte-i18n';
 </script>
 
-<style>
-    img.masthead-avatar {
-        border-radius: 50%;
-    }
-    header.masthead {
-        position: relative;
-        overflow: hidden;
+<svelte:head>
+    <title>Alex Rock - {$_('master_head.title')}</title>
+</svelte:head>
+
+<header>
+    <div id="stars"></div>
+    <div class="container">
+        <img src="/img/avatar.jpg" alt="">
+
+        <h1>Alex Rock</h1>
+
+        <div id="moon-icon-container">
+            <span></span>
+            <i id="moon-icon" class="fa fa-moon"></i>
+            <span></span>
+        </div>
+
+        <p id="head_text">
+            {$_('master_head.title')}
+        </p>
+    </div>
+
+    <div id="moon"></div>
+</header>
+
+<section class="container" id="skills">
+    <h2>{$_('skills.title')}</h2>
+
+    <div class="skills">
+        <div class="col">
+            {@html $_('skills.left')}
+        </div>
+        <div class="col">
+            {@html $_('skills.right')}
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    header {
+        @apply relative overflow-hidden text-white text-center;
         background: transparent url('/img/True_and_imagine_stars.png') repeat;
-        color: white;
+        img {
+            @apply block w-52 my-10 rounded-full mx-auto;
+        }
+        h1 {
+            @apply uppercase;
+        }
+        #head_text {
+            @apply text-lg;
+        }
     }
-    header.masthead .container {
-        position: relative;
-        z-index: 1;
+    #moon-icon-container {
+        @apply relative mx-auto flex items-center;
+        span {
+            @apply w-64 bg-sky-400 border-2 border-sky-400 h-1 mx-8 rounded-full;
+        }
+        #moon-icon {
+            @apply text-4xl my-5 text-slate-100;
+        }
     }
 
     #stars {
-        position: absolute;
-        z-index: 0;
+        @apply absolute z-0 top-1/2 left-1/2 animate-[spin-bg_360s_linear_infinite];
         background: transparent url('/img/True_and_imagine_stars.png') repeat;
         width: 1920px;
         height: 1965px;
-        top: 50%;
-        left: 50%;
         margin-top: -982px;
         margin-left: -960px;
-        -webkit-animation: spin-bg 360s linear infinite;
-        -moz-animation: spin-bg 360s linear infinite;
-        animation: spin-bg 360s linear infinite;
     }
     #moon {
         background: transparent url('/img/pierstoval_moon_by_lawlie.png') no-repeat top center;
@@ -38,60 +79,9 @@
         width: 160px;
         height: 160px;
         margin: 50px auto 50px auto;
-        -webkit-animation: spin 270s linear infinite;
-        -moz-animation: spin 270s linear infinite;
-        animation: spin 270s linear infinite;
+        @apply animate-[spin_270s_linear_infinite];
     }
 
     @-webkit-keyframes spin-bg { 100% { -webkit-transform: rotate(-360deg); } } @-moz-keyframes spin-bg { 100% { -moz-transform: rotate(-360deg); } } @keyframes spin-bg { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
     @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } } @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } } @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 </style>
-
-<svelte:head>
-    <title>{$_('master_head.title')}</title>
-</svelte:head>
-
-<header class="masthead">
-    <div id="stars"></div>
-    <div class="container">
-        <img class="masthead-avatar" src="/img/avatar.jpg" alt="">
-
-        <h1>Alex Rock</h1>
-
-        <i class="fa fa-moon"></i>
-
-        <p class="masthead-subheading font-weight-light mb-0">
-            {$_('master_head.title')}
-        </p>
-    </div>
-
-    <div id="moon"></div>
-</header>
-
-<section class="page-section bg-primary text-white mb-0" id="skills">
-    <div class="container">
-        <h2 class="page-section-heading text-center text-uppercase text-white">{$_('skills.title')}</h2>
-
-        <div class="divider-custom divider-light">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon">
-                <i class="fas fa-moon"></i>
-            </div>
-            <div class="divider-custom-line"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-4 offset-lg-2 ml-auto">
-                <p class="lead text-center">
-                    {@html $_('skills.left')}
-                </p>
-            </div>
-            <div class="col-lg-4 mr-auto">
-                <p class="lead text-center">
-                    {@html $_('skills.right')}
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>

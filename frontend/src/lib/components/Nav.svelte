@@ -25,60 +25,67 @@
     $: nextLocaleEmoji = nextLocale === 'en' ? '🇬🇧' : '🇫🇷';
 </script>
 
-<nav id="nav_list">
-    <div id="brand-collapse-container">
-        <a href="/" id="brand-link" title="Alex-Rock.tech">
-            <img src="/favicon.png" alt="Alex-Rock.tech brand image" />
-        </a>
+<div id="nav_container">
+    <nav id="nav_list" class="container">
+        <div id="brand-collapse-container">
+            <a href="/" id="brand-link" title="Alex-Rock.tech">
+                <img src="/favicon.png" alt="Alex-Rock.tech brand image" />
+            </a>
 
-        <button
-                id="toggle_collapse"
-                type="button"
-                aria-controls="nav_list"
-                aria-expanded="false"
-                aria-label="{$_('toggle_navigation')}"
-                on:click={toggleNav}
-        >
-            <i class="fa fa-bars"></i>
-            <span>Menu</span>
-        </button>
-    </div>
+            <button
+                    id="toggle_collapse"
+                    type="button"
+                    aria-controls="nav_list"
+                    aria-expanded="false"
+                    aria-label="{$_('toggle_navigation')}"
+                    on:click={toggleNav}
+            >
+                <i class="fa fa-bars"></i>
+                <span>Menu</span>
+            </button>
+        </div>
 
-    <div id="collapsible-nav-container">
-        <ul class="collapsible" class:collapsed={collapseClass}>
-            <li>
-                <a href="/{$locale}/services">{$_("services.title")}</a>
-            </li>
+        <div id="collapsible-nav-container">
+            <ul class="collapsible" class:collapsed={collapseClass}>
+                <li>
+                    <a class="text-heading" href="/{$locale}/services">{$_("services.title")}</a>
+                </li>
 
-            <li>
-                <a href="/{$locale}/trainings">{$_("services.training.title")}</a>
-            </li>
+                <li>
+                    <a href="/{$locale}/trainings">{$_("services.training.title")}</a>
+                </li>
 
-            <li>
-                <a href="/{$locale}/coaching">{$_("services.coaching.title")}</a>
-            </li>
+                <li>
+                    <a href="/{$locale}/coaching">{$_("services.coaching.title")}</a>
+                </li>
 
-            <li>
-                <a href="/{$locale}/talks">{$_("services.talks.title")}</a>
-            </li>
+                <li>
+                    <a href="/{$locale}/talks">{$_("services.talks.title")}</a>
+                </li>
 
-            <li>
-                <a href="/{$locale}/contact">{$_("contact.title")}</a>
-            </li>
+                <li>
+                    <a href="/{$locale}/contact">{$_("contact.title")}</a>
+                </li>
 
-            <li>
-                <a href="https://www.orbitale.io/">{$_('menu.blog')}</a>
-            </li>
+                <li>
+                    <a href="https://www.orbitale.io/">{$_('menu.blog')}</a>
+                </li>
 
-            <li>
-                <a href="{nextLocaleUrl}" id="locale_link"><span>{nextLocaleEmoji}</span> {nextLocale.toUpperCase()}</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+                <li>
+                    <a href="{nextLocaleUrl}" id="locale_link"><span>{nextLocaleEmoji}</span> {nextLocale.toUpperCase()}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
 <style lang="scss">
+    #nav_container {
+        @apply bg-sky-800 text-sky-100;
+    }
     nav {
+        @apply z-10 justify-between items-center flex max-md:flex-col;
+
         #toggle_collapse {
             @apply md:sr-only;
             i {
@@ -89,9 +96,9 @@
             }
         }
         .collapsible {
-            @apply max-md:bg-slate-100 max-md:absolute top-0 left-0 z-50;
+            @apply max-md:absolute max-md:bg-sky-800 max-md:text-left top-0 left-0 z-50;
             &.collapsed {
-                @apply max-md:max-h-0 overflow-hidden;
+                @apply max-md:hidden overflow-hidden;
             }
         }
 
@@ -102,7 +109,6 @@
             }
         }
 
-        @apply max-md:bg-slate-50 justify-between items-center flex max-md:flex-col;
         #collapsible-nav-container {
             @apply relative w-full;
         }
@@ -113,14 +119,14 @@
         ul {
             @apply flex max-md:flex-col justify-end items-center;
             &, li {
-                @apply list-none text-center;
+                @apply list-none;
                 &, a, button {
                     @apply max-md:w-full;
                 }
             }
         }
         a, button {
-            @apply inline-block text-center leading-8 mx-1 px-2;
+            @apply inline-block leading-8 mx-1 px-2 font-bold uppercase;
             &:not(#brand-link) {
                 @apply py-2;
             }

@@ -8,19 +8,40 @@ $fa-font-path: '/webfonts/';
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", sans-serif;
-    font-size: 100%;
-    box-sizing: border-box;
-    min-height: 100vh;
+@layer base {
+    .text-default {
+        font-family: "Lato", sans-serif;
+        @apply tracking-normal;
+    }
+    .text-heading {
+        font-family: "Montserrat", sans-serif !important;
+        @apply tracking-normal;
+    }
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
+html, body {
+    @apply m-0 p-0 text-[100%] box-border min-h-[100vh] text-default;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif;
+    @apply font-bold text-heading;
+}
+
+h1 { @apply text-5xl; }
+h2 { @apply text-4xl; }
+h3 { @apply text-3xl; }
+h4 { @apply text-2xl; }
+h5 { @apply text-xl; }
+h6 { @apply text-lg; }
+
+img {
+    @apply inline-block;
+}
+
+.container {
+    @apply relative z-0 w-full max-w-screen-lg max-md:max-w-md mx-auto;
 }

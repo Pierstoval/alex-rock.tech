@@ -2,12 +2,14 @@
 	import "@fontsource/montserrat";
 	import "@fontsource/montserrat/700.css";
 	import "@fontsource/lato";
+	import "@fontsource/lato/700.css";
 
 	import { type Page } from "@sveltejs/kit";
 	import { page } from '$app/stores';
 	import {init, locale} from 'svelte-i18n';
 	import '$lib/i18n';
 	import Nav from '$lib/components/Nav.svelte';
+	import Footer from "$lib/components/Footer.svelte";
 	import {SvelteToast} from '@zerodevx/svelte-toast';
 
 	let currentLocale = 'en';
@@ -45,6 +47,8 @@
 <div id="content">
 	<slot></slot>
 </div>
+
+<Footer />
 
 <div class="scroll-to-top d-lg-none position-fixed">
 	<a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">

@@ -1,36 +1,43 @@
 <script>
 	import {_, locale} from 'svelte-i18n';
 	import {marked} from "marked";
+	import LilMoonHeading from "$lib/components/LilMoonHeading.svelte";
 </script>
 
-<section class="page-section portfolio" id="services">
+<section id="services">
 	<div class="container">
-
-		<div class="justify-content-center">
-
-			<h2 class="page-section-heading text-center text-secondary text-uppercase mb-0">
+		<div>
+			<h2>
 				{$_('services.development.title')}
 			</h2>
 
-			<div class="divider-custom">
-				<div class="divider-custom-line"></div>
-				<div class="divider-custom-icon">
-					<i class="fas fa-moon"></i>
-				</div>
-				<div class="divider-custom-line"></div>
-			</div>
+			<LilMoonHeading dark={true} />
 
-			<div class="mb-2 text-justify no-p-margin">
+			<div>
 				{@html marked($_('services.development.description').replace("\n", '<br>'))}
 				<br>
 				{@html marked($_('services.development.side_note').replace("\n", '<br>'))}
 			</div>
 
-			<a href="/{$locale}/contact" class="btn btn-primary btn-xl btn-outline-light">
+			<a href="/{$locale}/contact" id="contact_link">
 				{$_('service_item_button')}
 			</a>
-
 		</div>
-
 	</div>
 </section>
+
+<style lang="scss">
+	h2 {
+		@apply text-center;
+	}
+	:global li {
+		@apply list-disc ml-8;
+	}
+	:global strong {
+		@apply text-gray-800;
+	}
+	#contact_link {
+		@apply btn;
+		@apply inline-block rounded-lg px-4 py-2;
+	}
+</style>

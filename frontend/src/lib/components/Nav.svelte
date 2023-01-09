@@ -26,7 +26,7 @@
 </script>
 
 <div id="nav_container">
-    <nav id="nav_list" class="container">
+    <nav id="nav_list">
         <div id="brand-collapse-container">
             <a href="/" id="brand-link" title="Alex-Rock.tech">
                 <img src="/favicon.png" alt="Alex-Rock.tech brand image" />
@@ -48,7 +48,7 @@
         <div id="collapsible-nav-container">
             <ul class="collapsible" class:collapsed={collapseClass}>
                 <li>
-                    <a class="text-heading" href="/{$locale}/services">{$_("services.title")}</a>
+                    <a href="/{$locale}/services">{$_("services.title")}</a>
                 </li>
 
                 <li>
@@ -126,9 +126,9 @@
             }
         }
         a, button {
-            @apply inline-block leading-8 mx-1 px-2 font-bold uppercase;
+            @apply inline-block leading-8 mx-1 px-4 font-bold uppercase text-heading;
             &:not(#brand-link) {
-                @apply py-2;
+                @apply py-3;
             }
 
             span, &:hover {

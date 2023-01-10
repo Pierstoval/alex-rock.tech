@@ -19,7 +19,7 @@
 				{@html marked($_('services.development.side_note').replace("\n", '<br>'))}
 			</div>
 
-			<a href="/{$locale}/contact" id="contact_link">
+			<a href="/{$locale}/contact" class="btn">
 				{$_('service_item_button')}
 			</a>
 		</div>
@@ -35,9 +35,5 @@
 	}
 	:global strong {
 		@apply text-gray-800;
-	}
-	#contact_link {
-		@apply btn;
-		@apply inline-block rounded-lg px-4 py-2;
 	}
 </style>

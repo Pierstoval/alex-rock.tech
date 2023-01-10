@@ -8,7 +8,7 @@ $fa-font-path: '/webfonts/';
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
-@layer base {
+@layer utilities {
     .text-default {
         font-family: "Lato", sans-serif;
         @apply tracking-normal;
@@ -18,7 +18,7 @@ $fa-font-path: '/webfonts/';
         @apply tracking-normal;
     }
     .btn {
-        @apply inline-block rounded-lg px-4 py-2;
+        @apply inline-block rounded-lg text-xl px-6 py-4 my-4 bg-emerald-500 text-gray-100;
     }
 }
 
@@ -43,6 +43,9 @@ h6 { @apply text-lg; }
 
 img, button {
     @apply inline-block;
+}
+blockquote {
+    @apply text-lg pl-2 py-1 text-gray-800;
 }
 
 .container {

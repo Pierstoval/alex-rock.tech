@@ -4,39 +4,21 @@
 	import "@fontsource/lato";
 	import "@fontsource/lato/700.css";
 
-	import { type Page } from "@sveltejs/kit";
-	import { page } from '$app/stores';
-	import {init, locale} from 'svelte-i18n';
 	import '$lib/i18n';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from "$lib/components/Footer.svelte";
 	import {SvelteToast} from '@zerodevx/svelte-toast';
+	import {init} from "$lib/i18n";
+	import {locale} from "svelte-i18n";
 
 	let currentLocale = 'en';
 
 	locale.subscribe((loc: string) => currentLocale = loc);
 
-	page.subscribe((page: Page) => {
-		let lang = page.params.locale;
-
-		if (!lang) {
-			lang = 'en';
-		}
-
-		if (lang !== 'fr' && lang !== 'en') {
-			throw new Error(`Invalid locale ${lang}`);
-		}
-
-		locale.set(lang);
-
-		init({
-			fallbackLocale: lang,
-			initialLocale: lang,
-		});
-	});
+	init(currentLocale || 'en');
 </script>
 
-<span id="page-top" data-segment="{$locale}"></span>
+<span id="page-top"></span>
 
 <div id="toast_container">
 	<SvelteToast />

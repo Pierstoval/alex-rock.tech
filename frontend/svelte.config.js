@@ -14,12 +14,8 @@ const config = {
 			pages: './build/',
 			assets: './build/',
 			precompress: true,
-			fallback: 'index.html',
 		}),
 		trailingSlash: 'always',
-		prerender: {
-			crawl: true,
-		},
 	}
 };
 

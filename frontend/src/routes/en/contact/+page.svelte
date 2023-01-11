@@ -1,7 +1,7 @@
 <script>
-    import Home from '$lib/pages/Home.svelte';
+    import Contact from '$lib/pages/Contact.svelte';
     import {init} from "$lib/i18n";
 	init('en');
 </script>
 
-<Home />
+<Contact />

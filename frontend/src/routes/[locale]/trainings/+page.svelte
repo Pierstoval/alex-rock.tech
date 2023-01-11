@@ -2,6 +2,7 @@
 	import {_} from 'svelte-i18n';
 	import {marked} from "marked";
 	import Training from '$lib/components/Training.svelte';
+	import LilMoonHeading from "$lib/components/LilMoonHeading.svelte";
 
 	const trainings = [
 		{
@@ -37,20 +38,13 @@
 	const chunked_array = chunks(trainings, 2);
 </script>
 
-<section class="page-section" id="trainings">
+<section>
 	<div class="container">
-
-		<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+		<h2>
 			{$_('services.training.title')}
 		</h2>
 
-		<div class="divider-custom">
-			<div class="divider-custom-line"></div>
-			<div class="divider-custom-icon">
-				<i class="fas fa-moon"></i>
-			</div>
-			<div class="divider-custom-line"></div>
-		</div>
+		<LilMoonHeading dark={true} />
 
 		<p>
 			{@html marked($_('services.training.description'))}

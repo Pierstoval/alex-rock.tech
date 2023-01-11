@@ -14,11 +14,27 @@ $fa-font-path: '/webfonts/';
         @apply tracking-normal;
     }
     .text-heading {
-        font-family: "Montserrat", sans-serif !important;
+        font-family: "Montserrat", sans-serif;
         @apply tracking-normal;
     }
     .btn {
         @apply inline-block rounded-lg text-xl px-6 py-4 my-4 bg-emerald-500 text-gray-100;
+    }
+    .btn.sm {
+        @apply px-3 py-1.5 my-0.5 mx-0.5 text-xs;
+    }
+    .btn.blue {
+        @apply bg-sky-500;
+    }
+    .btn.red {
+        @apply bg-red-500;
+    }
+    .alert {
+        @apply relative px-4 py-3 mb-6 bg-transparent border-transparent rounded-lg;
+        border: .125rem solid;
+    }
+    .alert-info {
+        @apply text-sky-700 bg-sky-100 border-sky-200;
     }
 }
 
@@ -48,6 +64,16 @@ blockquote {
     @apply text-lg pl-2 py-1 text-gray-800;
 }
 
+ul {
+    @apply my-2;
+}
+li {
+    @apply list-disc ml-8;
+}
+strong {
+    @apply text-gray-800;
+}
+
 .container {
-    @apply relative z-0 w-full max-w-screen-lg max-md:max-w-md md:max-w-xl lg:max-w-2xl mx-auto;
+    @apply relative z-0 mx-auto;
 }

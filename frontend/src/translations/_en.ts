@@ -84,9 +84,13 @@ export const dictionary = {
     "training_item.symfony_advanced_text": "Duration: 5 days<br>\nPré-requis: PHP, PHP object oriented, Discover Symfony\n\n**Symfony helps us everyday** in our programming practices, and to be very comfortable with the framework, we also need to use its **advanced components**, and learn **how the framework internals work**.\n",
 
     "services.coaching.title": "Coaching",
-    "services.coaching.description": "* You start a **new project** and need **architecture advices**?\n* You have **new ideas** for a project and don't know **where to start**?\n* You recently hired **junior devs** that need a **mentor** to be more comfortable with your project?\n* Your project has **high quality requirements** and you need to **setup tools** to respect them?\n\nAll these questions can sometimes need **short answers**, in **less than an hour** for some! Others are answered over time, an hour here, two hours there...\n\nWith coaching plans, you book in advance **as many hours as you want**, and we together plan a video conference session, code review, quality assurance checks, advices session, etc., depending on your schedules.\n\nAs long as you still have hours to spend, you just need to contact me to schedule one or more hours.\n\n**One single price:**\n\n## 85 € HT per hour\n\nIf you need to book several dozens of hours, feel free to contact me.\n",
+    "services.coaching.description": "* You start a **new project** and need **architecture advices**?\n* You have **new ideas** for a project and don't know **where to start**?\n* You recently hired **junior devs** that need a **mentor** to be more comfortable with your project?\n* Your project has **high quality requirements** and you need to **setup tools** to respect them?\n\nAll these questions can sometimes need **short answers**, in **less than an hour** for some! Others are answered over time, an hour here, two hours there...\n\nWith coaching plans, you book in advance **as many hours as you want**, and we together plan a video conference session, code review, quality assurance checks, advices session, etc., depending on your schedules.\n",
 
-    "lang_with_colon": "Lang:",
+    "language": "Language",
+    "title": "Title",
+    "event": "Event",
+    "date": "Date",
+    "links": "Links",
     "services.talks.title": "Talks",
     "talks.stars_disclaimer": "(titles with a \"🌟\" are my favourites or more successful ones!)",
     "talks.video": "Video",

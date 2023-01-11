@@ -51,9 +51,11 @@
                     <a href="/{$locale}/services">{$_("services.title")}</a>
                 </li>
 
+                <!--
                 <li>
                     <a href="/{$locale}/trainings">{$_("services.training.title")}</a>
                 </li>
+                -->
 
                 <li>
                     <a href="/{$locale}/coaching">{$_("services.coaching.title")}</a>

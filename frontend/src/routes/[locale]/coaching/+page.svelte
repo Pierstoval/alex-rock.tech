@@ -1,6 +1,7 @@
 <script>
 	import {_, locale} from 'svelte-i18n';
 	import {marked} from "marked";
+	import LilMoonHeading from "$lib/components/LilMoonHeading.svelte";
 </script>
 
 <section class="page-section" id="coaching">
@@ -10,13 +11,7 @@
 			{$_('services.coaching.title')}
 		</h2>
 
-		<div class="divider-custom">
-			<div class="divider-custom-line"></div>
-			<div class="divider-custom-icon">
-				<i class="fas fa-moon"></i>
-			</div>
-			<div class="divider-custom-line"></div>
-		</div>
+		<LilMoonHeading dark={true} />
 
 		<div class="mb-2 text-justify no-p-margin">
 			{@html marked($_('services.coaching.description'))}

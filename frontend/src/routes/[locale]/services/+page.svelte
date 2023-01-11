@@ -30,10 +30,4 @@
 	h2 {
 		@apply text-center;
 	}
-	:global li {
-		@apply list-disc ml-8;
-	}
-	:global strong {
-		@apply text-gray-800;
-	}
 </style>

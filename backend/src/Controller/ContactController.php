@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\PublicService;
 use MeteoConcept\HCaptchaBundle\Form\HCaptchaType;
 use Psr\Http\Client\NetworkExceptionInterface;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -15,10 +16,11 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class ContactController
+class ContactController implements PublicService
 {
     public function __construct(
         private readonly bool $debug,
@@ -28,6 +30,7 @@ class ContactController
     ) {
     }
 
+    #[Route("/api/send-email", methods: ["POST"])]
     public function __invoke(Request $request): Response
     {
         $form = $this->createForm();
@@ -87,6 +90,7 @@ class ContactController
     {
         $builder = $this->formFactory->createNamedBuilder('', options: [
             'allow_extra_fields' => true,
+            'csrf_protection' => false,
         ])
             ->add('subject', TextType::class, [
                 'constraints' => [

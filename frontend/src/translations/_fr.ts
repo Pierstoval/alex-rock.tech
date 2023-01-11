@@ -26,12 +26,13 @@ export const dictionary = {
     "contact.title": "Contact",
     "contact.me.title": "Me trouver",
 
-    "contact.form.email": "Email",
-    "contact.form.message": "Message",
+    "contact.form.email": "Adresse e-mail",
+    "contact.form.message": "Sujet",
     "contact.form.name": "Nom",
     "contact.form.phone": "Téléphone",
-    "contact.form.subject": "Sujet",
+    "contact.form.subject": "Sujet de votre message",
     "contact.form.send": "Envoyer",
+    "contact.form.data_usage_disclaimer": "Nous ne partagerons votre adresse e-mail avec personne.",
 
     "contact.success": "Votre message a été envoyé ! Je le recevrai d'ici peu et je prendrai soin de vous répondre rapidement, merci !",
     "contact.error": "Votre message n'a pas pu être envoyé, veuillez me contacter par le biais de mes autres réseaux.",

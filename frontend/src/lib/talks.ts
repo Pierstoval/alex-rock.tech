@@ -1,10 +1,18 @@
 export default [
 	{
+		"title": "talks.asynconf.deterministic_code",
+		"videos": ["https://www.youtube.com/watch?v=z2H3tbPx8PM"],
+		"slides": [],
+		"lang": "🇫🇷",
+		"conference": "Asynconf 2021",
+		"date": "2021-11-01",
+	},
+	{
 		"title": "talks.hello_worlds.title",
 		"videos": ["https://www.youtube.com/watch?v=J-et1iPnp9I"],
 		"slides": [],
 		"lang": "🇫🇷",
-		"conference": "AFUP Day 2021",
+		"conference": "AFUP Day 2021 Tours",
 		"date": "2021-06-11",
 	},
 	{
@@ -12,8 +20,16 @@ export default [
 		"videos": ["https://www.youtube.com/watch?v=oKkILL8ypIw"],
 		"slides": ["https://talks.pierstoval.com/rust-for-php-devs"],
 		"lang": "🇫🇷",
-		"conference": "Asynconf",
+		"conference": "Asynconf 2020",
 		"date": "2020-12-22",
+	},
+	{
+		"title": "talks.afup_forum_php_2019.atypical",
+		"videos": ["https://www.youtube.com/watch?v=lBC-AV-o73k"],
+		"slides": ["https://talks.pierstoval.com/forum-php-neuroatypie-et-it/#/"],
+		"lang": "🇫🇷",
+		"conference": "Forum PHP 2019",
+		"date": "2019-10-16",
 	},
 	{
 		"title": "talks.afup_day_2019.atypical",

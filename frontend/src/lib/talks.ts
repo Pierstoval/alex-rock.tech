@@ -1,5 +1,13 @@
 export default [
 	{
+		"title": "talks.hello_worlds.title",
+		"videos": ["https://www.youtube.com/watch?v=J-et1iPnp9I"],
+		"slides": [],
+		"lang": "🇫🇷",
+		"conference": "AFUP Day 2021",
+		"date": "2021-06-11",
+	},
+	{
 		"title": "talks.rust_php.title",
 		"videos": ["https://www.youtube.com/watch?v=oKkILL8ypIw"],
 		"slides": ["https://talks.pierstoval.com/rust-for-php-devs"],
@@ -24,8 +32,16 @@ export default [
 		"date": "2019-04-11",
 	},
 	{
+		"title": "talks.symfonylive.lightning_talk",
+		"videos": ["https://symfonycasts.com/screencast/paris2019/lightning-talks"],
+		"slides": [],
+		"lang": "🇫🇷",
+		"conference": "SymfonyLive Paris 2019",
+		"date": "2019-03-29",
+	},
+	{
 		"title": "talks.sf4_news.title",
-		"videos": ["https://www.youtube.com/watch?v=F7OmBoqHcfY&t=1739s"],
+		"videos": ["https://www.youtube.com/watch?v=F7OmBoqHcfY&t=1570s"],
 		"slides": ["http://prezgame.herokuapp.com/presentation"],
 		"lang": "🇫🇷",
 		"conference": "Meetup PHP TheCamp",

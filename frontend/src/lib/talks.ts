@@ -29,7 +29,7 @@ export default [
 		"slides": ["https://talks.pierstoval.com/forum-php-neuroatypie-et-it/#/"],
 		"lang": "🇫🇷",
 		"conference": "Forum PHP 2019",
-		"date": "2019-10-16",
+		"date": "2019-10-24",
 	},
 	{
 		"title": "talks.afup_day_2019.atypical",

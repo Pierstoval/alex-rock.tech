@@ -28,18 +28,18 @@
 					<td>{talk.conference}</td>
 					<td>{$date(new Date(talk.date), {format: 'medium', locale: $locale})}</td>
 					<td class="text-right">
-						{#each talk.videos as url, i}
-							<a href="{url}" class="btn sm red">
-								<i class="fab fa-youtube"></i>
-								{$_('talks.video')}
-								{#if talk.videos.length > 1}{i}{/if}
-							</a>
-						{/each}
 						{#each talk.slides as url, i}
 							<a href="{url}" class="btn sm blue">
 								<i class="fa fa-file-code"></i>
 								{$_('talks.slides')}
 								{#if talk.slides.length > 1}{i}{/if}
+							</a>
+						{/each}
+						{#each talk.videos as url, i}
+							<a href="{url}" class="btn sm red">
+								<i class="fab fa-youtube"></i>
+								{$_('talks.video')}
+								{#if talk.videos.length > 1}{i}{/if}
 							</a>
 						{/each}
 					</td>

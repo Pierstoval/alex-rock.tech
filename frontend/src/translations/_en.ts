@@ -105,4 +105,5 @@ export const dictionary = {
     "talks.afup_forum_php_2019.atypical": "🌟 Neuro-atypical disorders in tech (full talk)",
     "talks.afup_day_2019.atypical": "Neuro-atypical disorders in tech",
     "talks.nomad_php.esteren_maps": "Building Interactive Maps with PHP and JavaScript",
+    "talks.api_platform_con.svelte": "API Platform, Svelte and maximum of buzz-words",
 };

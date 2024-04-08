@@ -1,7 +1,7 @@
 # Using ubuntu because playwright isn't compatible with debian.
-FROM node:18-bullseye-slim
+FROM node:18-bookworm-slim
 
-ENV GOSU_VERSION=1.14 \
+ENV GOSU_VERSION=1.16 \
     RUN_USER="node"
 
 COPY bin/entrypoint.sh /usr/bin/entrypoint
@@ -13,7 +13,7 @@ ENTRYPOINT ["/usr/bin/entrypoint"]
 RUN export DEBIAN_FRONTEND=noninteractive \
 	&& set -xe \
     && apt-get update \
-    && apt-get upgrade -y curl \
+    && apt-get upgrade -y curl ca-certificates openssl \
     && npm -g i npm \
     && chmod a+x /usr/bin/entrypoint \
     \
@@ -26,7 +26,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     \
     && `# Clean apt and remove unused libs/packages to make image smaller` \
     && npm cache clean --force \
-    && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false $BUILD_LIBS \
+    && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false \
     && apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/www/* /var/cache/* /home/.composer/cache

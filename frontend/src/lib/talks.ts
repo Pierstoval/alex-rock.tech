@@ -1,5 +1,13 @@
 export default [
 	{
+		"title": "talks.api_platform_con.svelte",
+		"videos": ["https://www.youtube.com/watch?v=vFZFYkpyT9w"],
+		"slides": ["https://talks.pierstoval.com/api-platform-svelte-and-maximum-buzzwords/"],
+		"lang": "🇫🇷",
+		"conference": "API Platform Conference 2023",
+		"date": "2023-09-22",
+	},
+	{
 		"title": "talks.asynconf.deterministic_code",
 		"videos": ["https://www.youtube.com/watch?v=z2H3tbPx8PM"],
 		"slides": [],

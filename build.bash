@@ -46,8 +46,6 @@ composer install \
 php bin/console cache:clear --no-warmup
 php bin/console cache:warmup
 
-php bin/console doctrine:schema:validate || echo 'Doctrine schema not valid, please make sure it is correct.'
-
 ##
 ## Frontend deploy
 ##
@@ -78,7 +76,7 @@ cd "${DIR}"
 if [[ -f "${DIR}/../post_deploy.bash" ]]
 then
     echo "[DEPLOY] > Executing post-deploy scripts"
-    bash "${DIR}/post_deploy.bash" ${NEW_VERSION} ${CHANGELOG_FILE}
+    bash "${DIR}/../post_deploy.bash" ${NEW_VERSION} ${CHANGELOG_FILE}
 fi
 
 echo "[DEPLOY] > Done!"

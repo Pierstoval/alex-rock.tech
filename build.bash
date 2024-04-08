@@ -8,6 +8,17 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ##
+## Git retrieval
+##
+
+echo "[DEPLOY] > Retrieve distant changes"
+
+cd "${DIR}"
+
+git fetch --all --prune
+git reset --hard origin/main
+
+##
 ## Backend deploy
 ##
 

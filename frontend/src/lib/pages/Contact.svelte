@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {_} from 'svelte-i18n';
+    import {_, locale} from 'svelte-i18n';
     import {PUBLIC_CAPTCHA, PUBLIC_CAPTCHA_SITEKEY, PUBLIC_BACKEND_URL, PUBLIC_CONTACT_ENDPOINT} from '$env/static/public';
     import message from "$lib/message";
     import {ToastType} from "$lib/Toast";
@@ -25,7 +25,7 @@
             contactBody.set('h-captcha-response', res);
         }
 
-        let res = await fetch(PUBLIC_BACKEND_URL+PUBLIC_CONTACT_ENDPOINT, {
+        let res = await fetch(PUBLIC_BACKEND_URL+PUBLIC_CONTACT_ENDPOINT.replace('{_locale}', $locale), {
             method: 'POST',
             body: contactBody,
         });

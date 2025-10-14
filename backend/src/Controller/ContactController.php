@@ -30,7 +30,7 @@ class ContactController implements PublicService
     ) {
     }
 
-    #[Route("/api/{_locale}/send-email", defaults: ['_format' => 'json'], methods: ["POST"])]
+    #[Route("/api/{_locale}/send-email", requirements: ['_locale' => 'fr|en'], defaults: ['_format' => 'json', '_locale' => 'fr'], methods: ["POST"])]
     public function __invoke(Request $request): Response
     {
         $form = $this->createForm();

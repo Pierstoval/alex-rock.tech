@@ -90,7 +90,6 @@ class ContactController implements PublicService
     {
         $builder = $this->formFactory->createNamedBuilder('', options: [
             'allow_extra_fields' => true,
-            'csrf_protection' => false,
         ])
             ->add('subject', TextType::class, [
                 'constraints' => [

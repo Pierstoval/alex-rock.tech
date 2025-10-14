@@ -1,5 +1,3 @@
-version: "3.4"
-
 volumes:
     db_data:
     php_socket:

@@ -9,8 +9,6 @@
 			{$_('services.talks.title')}
 		</h2>
 
-		<blockquote>{$_('talks.stars_disclaimer')}</blockquote>
-
 		<table>
 			<thead>
 				<tr>

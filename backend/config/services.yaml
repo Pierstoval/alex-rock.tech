@@ -13,8 +13,6 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
         bind:
             bool $debug: '%kernel.debug%'
-            ApiPlatform\State\ProviderInterface $itemProvider: '@ApiPlatform\Doctrine\Orm\State\ItemProvider'
-            ApiPlatform\State\ProviderInterface $collectionProvider: '@ApiPlatform\Doctrine\Orm\State\CollectionProvider'
     _instanceof:
         App\PublicService:
             public: true

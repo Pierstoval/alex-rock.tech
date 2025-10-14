@@ -1,12 +1,12 @@
-FROM debian:10-slim
+FROM debian:12-slim
 
 LABEL maintainer="pierstoval@gmail.com"
 
 WORKDIR /srv
 
-CMD ["php-fpm8.1"]
+CMD ["php-fpm8.4"]
 
-ENV PHP_VERSION=8.1 \
+ENV PHP_VERSION=8.4 \
     GOSU_VERSION=1.14 \
     PANTHER_NO_SANDBOX=1 \
     PATH=/home/.composer/vendor/bin:$PATH \

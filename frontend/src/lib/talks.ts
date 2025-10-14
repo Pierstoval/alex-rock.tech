@@ -1,8 +1,24 @@
 export default [
 	{
+		"title": "talks.write_tests",
+		"videos": [],
+		"slides": ["https://talks.pierstoval.com/ecrivez-des-tests/index.html"],
+		"lang": "🇫🇷",
+		"conference": "Bring Your Own Dev - Mai 2025 - La Brasserie du Digital",
+		"date": "2025-05-13",
+	},
+	{
+		"title": "talks.legacy_rewrite",
+		"videos": [],
+		"slides": ["https://talks.pierstoval.com/on-m-a-dit-qu-il-fallait-tout-reecrire/index.html"],
+		"lang": "🇫🇷",
+		"conference": "Bring Your Own Dev - Février 2025 - La Brasserie du Digital",
+		"date": "2025-02-18",
+	},
+	{
 		"title": "talks.api_platform_con.svelte",
 		"videos": ["https://www.youtube.com/watch?v=vFZFYkpyT9w"],
-		"slides": ["https://talks.pierstoval.com/api-platform-svelte-and-maximum-buzzwords/"],
+		"slides": ["https://talks.pierstoval.com/api-platform-svelte-and-maximum-buzzwords/index.html"],
 		"lang": "🇫🇷",
 		"conference": "API Platform Conference 2023",
 		"date": "2023-09-22",
@@ -26,7 +42,7 @@ export default [
 	{
 		"title": "talks.rust_php.title",
 		"videos": ["https://www.youtube.com/watch?v=oKkILL8ypIw"],
-		"slides": ["https://talks.pierstoval.com/rust-for-php-devs"],
+		"slides": ["https://talks.pierstoval.com/rust-for-php-devs/index.html"],
 		"lang": "🇫🇷",
 		"conference": "Asynconf 2020",
 		"date": "2020-12-22",
@@ -34,7 +50,7 @@ export default [
 	{
 		"title": "talks.afup_forum_php_2019.atypical",
 		"videos": ["https://www.youtube.com/watch?v=lBC-AV-o73k"],
-		"slides": ["https://talks.pierstoval.com/forum-php-neuroatypie-et-it/#/"],
+		"slides": ["https://talks.pierstoval.com/forum-php-neuroatypie-et-it/index.html"],
 		"lang": "🇫🇷",
 		"conference": "Forum PHP 2019",
 		"date": "2019-10-24",
@@ -42,7 +58,7 @@ export default [
 	{
 		"title": "talks.afup_day_2019.atypical",
 		"videos": [],
-		"slides": ["https://talks.pierstoval.com/neuroatypie-et-it/"],
+		"slides": ["https://talks.pierstoval.com/neuroatypie-et-it/index.html"],
 		"lang": "🇫🇷",
 		"conference": "AFUP Day 2019",
 		"date": "2019-05-17",
@@ -50,7 +66,7 @@ export default [
 	{
 		"title": "talks.nomad_php.esteren_maps",
 		"videos": ["https://nomadphp.com/video/232/building-interactive-maps-with-php-and-javascript"],
-		"slides": ["https://talks.pierstoval.com/nomad_php_esteren_maps/", ],
+		"slides": ["https://talks.pierstoval.com/nomad_php_esteren_maps/index.html", ],
 		"lang": "🇬🇧",
 		"conference": "Nomad PHP",
 		"date": "2019-04-11",
@@ -74,7 +90,7 @@ export default [
 	{
 		"title": "talks.sf3_review.title",
 		"videos": [],
-		"slides": ["https://talks.pierstoval.com/sfreview"],
+		"slides": ["https://talks.pierstoval.com/sfreview/index.html"],
 		"lang": "🇫🇷",
 		"conference": "Meetup PHP HighCo",
 		"date": "2017-05-16",
